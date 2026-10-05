@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "selected-journal"
+version = "0.1.0"
+description = "Batch LetPub journal lookup with traceable exports"
+requires-python = ">=3.11"
+dependencies = ["requests>=2.32,<3", "beautifulsoup4>=4.12,<5", "openpyxl>=3.1,<4"]
+
+[project.optional-dependencies]
+test = ["pytest>=8,<10"]
+
+[project.scripts]
+selected-journal = "selected_journal.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["selected_journal*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

@@ -1,0 +1,11 @@
+.venv/
+__pycache__/
+.pytest_cache/
+*.egg-info/
+build/
+dist/
+.inspection/
+runs/
+.letpub-cache/
+cookies*.txt
+*.cookies.txt
