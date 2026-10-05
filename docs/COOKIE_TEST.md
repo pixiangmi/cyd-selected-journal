@@ -4,7 +4,7 @@
 
 ## 登录与运行结果
 
-Cookie 已转换为 Netscape 格式并保存在 `cookies.local.txt`，权限为 0600；`git check-ignore` 确认文件受 Git 忽略。载入 10 个 Cookie，仅发送到 LetPub 域，未保存账号密码。Cookie 值未写入本报告。
+Cookie 已转换为 Netscape 格式，现归入 `.local/credentials/letpub.cookies.txt`，权限为 0600；`git check-ignore` 确认文件受 Git 忽略。载入 10 个 Cookie，仅发送到 LetPub 域，未保存账号密码。Cookie 值未写入本报告。以下命令中的路径已按整理后的目录更新。
 
 运行：
 
@@ -12,7 +12,7 @@ Cookie 已转换为 Netscape 格式并保存在 `cookies.local.txt`，权限为 
 .venv/bin/python -m selected_journal query \
   --input examples/acceptance.csv \
   --output runs/cookie-test-20261005 \
-  --cookie-file cookies.local.txt --refresh
+  --cookie-file .local/credentials/letpub.cookies.txt --refresh
 ```
 
 9 条输入最终得到 7 条匹配，按期刊 ID 去重后为 5 本；另有刻意构造的 1 条未找到和 1 条 ISSN 校验失败。五本期刊的 `impact_factor.status` 和 JCR `status` 全部为 `ok`，此前匿名访问时这些字段均为 `login_required`。

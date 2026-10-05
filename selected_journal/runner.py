@@ -63,7 +63,7 @@ def matched_event(row, record):
                       "部分字段解析失败: " + ", ".join(broken) if broken else "精确匹配", record)
 
 
-def run_batch(inputs, directory, client, events=None, emit=print):
+def run_batch(inputs, directory, client, events=None, emit=print, export_options=None):
     events = dict(events or {})
     existing = {event["journal"]["journal_id"]: event["journal"] for event in events.values()
                 if event.get("journal") and event["query"]["status"] == "matched"}
@@ -94,7 +94,7 @@ def run_batch(inputs, directory, client, events=None, emit=print):
         exit_code = 130
     finally:
         data = result_data(inputs, events)
-        export_results(directory, data)
+        export_results(directory, data, export_options, emit=emit)
     counts = {status: sum(q["status"] == status for q in data["queries"])
               for status in ("matched", "needs_confirmation", "not_found", "partial", "failed", "invalid", "blocked", "pending")}
     emit("完成: " + ", ".join(f"{k}={v}" for k, v in counts.items() if v) + f"; 去重期刊={len(data['journals'])}")

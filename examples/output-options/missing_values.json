@@ -1,0 +1,906 @@
+{
+  "schema_version": 1,
+  "definition": "null、空白字符串、空列表或空对象为空值；0、False、unknown 不算空值。空表缺失率为 null。",
+  "field_names": "zh",
+  "tables": [
+    {
+      "table": "期刊汇总",
+      "row_count": 5,
+      "columns": [
+        {
+          "field": "journal_id",
+          "label": "LetPub期刊ID",
+          "row_count": 5,
+          "missing_count": 0,
+          "present_count": 5,
+          "missing_rate": 0.0,
+          "dropped": false,
+          "reasons": {}
+        },
+        {
+          "field": "input_ids",
+          "label": "关联输入ID",
+          "row_count": 5,
+          "missing_count": 0,
+          "present_count": 5,
+          "missing_rate": 0.0,
+          "dropped": false,
+          "reasons": {}
+        },
+        {
+          "field": "source_url",
+          "label": "来源链接",
+          "row_count": 5,
+          "missing_count": 0,
+          "present_count": 5,
+          "missing_rate": 0.0,
+          "dropped": false,
+          "reasons": {}
+        },
+        {
+          "field": "fetched_at",
+          "label": "抓取时间",
+          "row_count": 5,
+          "missing_count": 0,
+          "present_count": 5,
+          "missing_rate": 0.0,
+          "dropped": false,
+          "reasons": {}
+        },
+        {
+          "field": "journal_name",
+          "label": "期刊全称",
+          "row_count": 5,
+          "missing_count": 0,
+          "present_count": 5,
+          "missing_rate": 0.0,
+          "dropped": false,
+          "reasons": {}
+        },
+        {
+          "field": "journal_name_status",
+          "label": "期刊全称_状态",
+          "row_count": 5,
+          "missing_count": 0,
+          "present_count": 5,
+          "missing_rate": 0.0,
+          "dropped": false,
+          "reasons": {}
+        },
+        {
+          "field": "journal_name_raw",
+          "label": "期刊全称_页面原文",
+          "row_count": 5,
+          "missing_count": 0,
+          "present_count": 5,
+          "missing_rate": 0.0,
+          "dropped": false,
+          "reasons": {}
+        },
+        {
+          "field": "journal_name_version",
+          "label": "期刊全称_版本标签",
+          "row_count": 5,
+          "missing_count": 5,
+          "present_count": 0,
+          "missing_rate": 1.0,
+          "dropped": true,
+          "reasons": {
+            "unspecified": 5
+          }
+        },
+        {
+          "field": "journal_name_year",
+          "label": "期刊全称_指标年份",
+          "row_count": 5,
+          "missing_count": 5,
+          "present_count": 0,
+          "missing_rate": 1.0,
+          "dropped": true,
+          "reasons": {
+            "unspecified": 5
+          }
+        },
+        {
+          "field": "abbreviation",
+          "label": "期刊简称",
+          "row_count": 5,
+          "missing_count": 0,
+          "present_count": 5,
+          "missing_rate": 0.0,
+          "dropped": false,
+          "reasons": {}
+        },
+        {
+          "field": "abbreviation_status",
+          "label": "期刊简称_状态",
+          "row_count": 5,
+          "missing_count": 0,
+          "present_count": 5,
+          "missing_rate": 0.0,
+          "dropped": false,
+          "reasons": {}
+        },
+        {
+          "field": "abbreviation_raw",
+          "label": "期刊简称_页面原文",
+          "row_count": 5,
+          "missing_count": 0,
+          "present_count": 5,
+          "missing_rate": 0.0,
+          "dropped": false,
+          "reasons": {}
+        },
+        {
+          "field": "abbreviation_version",
+          "label": "期刊简称_版本标签",
+          "row_count": 5,
+          "missing_count": 5,
+          "present_count": 0,
+          "missing_rate": 1.0,
+          "dropped": true,
+          "reasons": {
+            "unspecified": 5
+          }
+        },
+        {
+          "field": "abbreviation_year",
+          "label": "期刊简称_指标年份",
+          "row_count": 5,
+          "missing_count": 5,
+          "present_count": 0,
+          "missing_rate": 1.0,
+          "dropped": true,
+          "reasons": {
+            "unspecified": 5
+          }
+        },
+        {
+          "field": "issn",
+          "label": "ISSN",
+          "row_count": 5,
+          "missing_count": 0,
+          "present_count": 5,
+          "missing_rate": 0.0,
+          "dropped": false,
+          "reasons": {}
+        },
+        {
+          "field": "issn_status",
+          "label": "ISSN_状态",
+          "row_count": 5,
+          "missing_count": 0,
+          "present_count": 5,
+          "missing_rate": 0.0,
+          "dropped": false,
+          "reasons": {}
+        },
+        {
+          "field": "issn_raw",
+          "label": "ISSN_页面原文",
+          "row_count": 5,
+          "missing_count": 0,
+          "present_count": 5,
+          "missing_rate": 0.0,
+          "dropped": false,
+          "reasons": {}
+        },
+        {
+          "field": "issn_version",
+          "label": "ISSN_版本标签",
+          "row_count": 5,
+          "missing_count": 5,
+          "present_count": 0,
+          "missing_rate": 1.0,
+          "dropped": true,
+          "reasons": {
+            "unspecified": 5
+          }
+        },
+        {
+          "field": "issn_year",
+          "label": "ISSN_指标年份",
+          "row_count": 5,
+          "missing_count": 5,
+          "present_count": 0,
+          "missing_rate": 1.0,
+          "dropped": true,
+          "reasons": {
+            "unspecified": 5
+          }
+        },
+        {
+          "field": "eissn",
+          "label": "eISSN",
+          "row_count": 5,
+          "missing_count": 1,
+          "present_count": 4,
+          "missing_rate": 0.2,
+          "dropped": false,
+          "reasons": {
+            "not_provided": 1
+          }
+        },
+        {
+          "field": "eissn_status",
+          "label": "eISSN_状态",
+          "row_count": 5,
+          "missing_count": 0,
+          "present_count": 5,
+          "missing_rate": 0.0,
+          "dropped": false,
+          "reasons": {}
+        },
+        {
+          "field": "eissn_raw",
+          "label": "eISSN_页面原文",
+          "row_count": 5,
+          "missing_count": 1,
+          "present_count": 4,
+          "missing_rate": 0.2,
+          "dropped": false,
+          "reasons": {
+            "unspecified": 1
+          }
+        },
+        {
+          "field": "eissn_version",
+          "label": "eISSN_版本标签",
+          "row_count": 5,
+          "missing_count": 5,
+          "present_count": 0,
+          "missing_rate": 1.0,
+          "dropped": true,
+          "reasons": {
+            "unspecified": 5
+          }
+        },
+        {
+          "field": "eissn_year",
+          "label": "eISSN_指标年份",
+          "row_count": 5,
+          "missing_count": 5,
+          "present_count": 0,
+          "missing_rate": 1.0,
+          "dropped": true,
+          "reasons": {
+            "unspecified": 5
+          }
+        },
+        {
+          "field": "impact_factor",
+          "label": "影响因子IF",
+          "row_count": 5,
+          "missing_count": 5,
+          "present_count": 0,
+          "missing_rate": 1.0,
+          "dropped": true,
+          "reasons": {
+            "login_required": 5
+          }
+        },
+        {
+          "field": "impact_factor_status",
+          "label": "影响因子IF_状态",
+          "row_count": 5,
+          "missing_count": 0,
+          "present_count": 5,
+          "missing_rate": 0.0,
+          "dropped": false,
+          "reasons": {}
+        },
+        {
+          "field": "impact_factor_raw",
+          "label": "影响因子IF_页面原文",
+          "row_count": 5,
+          "missing_count": 0,
+          "present_count": 5,
+          "missing_rate": 0.0,
+          "dropped": false,
+          "reasons": {}
+        },
+        {
+          "field": "impact_factor_version",
+          "label": "影响因子IF_版本标签",
+          "row_count": 5,
+          "missing_count": 0,
+          "present_count": 5,
+          "missing_rate": 0.0,
+          "dropped": false,
+          "reasons": {}
+        },
+        {
+          "field": "impact_factor_year",
+          "label": "影响因子IF_指标年份",
+          "row_count": 5,
+          "missing_count": 5,
+          "present_count": 0,
+          "missing_rate": 1.0,
+          "dropped": true,
+          "reasons": {
+            "unspecified": 5
+          }
+        },
+        {
+          "field": "citescore",
+          "label": "CiteScore",
+          "row_count": 5,
+          "missing_count": 0,
+          "present_count": 5,
+          "missing_rate": 0.0,
+          "dropped": false,
+          "reasons": {}
+        },
+        {
+          "field": "citescore_status",
+          "label": "CiteScore_状态",
+          "row_count": 5,
+          "missing_count": 0,
+          "present_count": 5,
+          "missing_rate": 0.0,
+          "dropped": false,
+          "reasons": {}
+        },
+        {
+          "field": "citescore_raw",
+          "label": "CiteScore_页面原文",
+          "row_count": 5,
+          "missing_count": 0,
+          "present_count": 5,
+          "missing_rate": 0.0,
+          "dropped": false,
+          "reasons": {}
+        },
+        {
+          "field": "citescore_version",
+          "label": "CiteScore_版本标签",
+          "row_count": 5,
+          "missing_count": 0,
+          "present_count": 5,
+          "missing_rate": 0.0,
+          "dropped": false,
+          "reasons": {}
+        },
+        {
+          "field": "citescore_year",
+          "label": "CiteScore_指标年份",
+          "row_count": 5,
+          "missing_count": 5,
+          "present_count": 0,
+          "missing_rate": 1.0,
+          "dropped": true,
+          "reasons": {
+            "unspecified": 5
+          }
+        },
+        {
+          "field": "oa",
+          "label": "开放获取状态",
+          "row_count": 5,
+          "missing_count": 0,
+          "present_count": 5,
+          "missing_rate": 0.0,
+          "dropped": false,
+          "reasons": {}
+        },
+        {
+          "field": "oa_status",
+          "label": "开放获取状态_状态",
+          "row_count": 5,
+          "missing_count": 0,
+          "present_count": 5,
+          "missing_rate": 0.0,
+          "dropped": false,
+          "reasons": {}
+        },
+        {
+          "field": "oa_raw",
+          "label": "开放获取状态_页面原文",
+          "row_count": 5,
+          "missing_count": 0,
+          "present_count": 5,
+          "missing_rate": 0.0,
+          "dropped": false,
+          "reasons": {}
+        },
+        {
+          "field": "oa_version",
+          "label": "开放获取状态_版本标签",
+          "row_count": 5,
+          "missing_count": 5,
+          "present_count": 0,
+          "missing_rate": 1.0,
+          "dropped": true,
+          "reasons": {
+            "unspecified": 5
+          }
+        },
+        {
+          "field": "oa_year",
+          "label": "开放获取状态_指标年份",
+          "row_count": 5,
+          "missing_count": 5,
+          "present_count": 0,
+          "missing_rate": 1.0,
+          "dropped": true,
+          "reasons": {
+            "unspecified": 5
+          }
+        },
+        {
+          "field": "review_time",
+          "label": "审稿周期",
+          "row_count": 5,
+          "missing_count": 0,
+          "present_count": 5,
+          "missing_rate": 0.0,
+          "dropped": false,
+          "reasons": {}
+        },
+        {
+          "field": "review_time_status",
+          "label": "审稿周期_状态",
+          "row_count": 5,
+          "missing_count": 0,
+          "present_count": 5,
+          "missing_rate": 0.0,
+          "dropped": false,
+          "reasons": {}
+        },
+        {
+          "field": "review_time_raw",
+          "label": "审稿周期_页面原文",
+          "row_count": 5,
+          "missing_count": 0,
+          "present_count": 5,
+          "missing_rate": 0.0,
+          "dropped": false,
+          "reasons": {}
+        },
+        {
+          "field": "review_time_version",
+          "label": "审稿周期_版本标签",
+          "row_count": 5,
+          "missing_count": 5,
+          "present_count": 0,
+          "missing_rate": 1.0,
+          "dropped": true,
+          "reasons": {
+            "unspecified": 5
+          }
+        },
+        {
+          "field": "review_time_year",
+          "label": "审稿周期_指标年份",
+          "row_count": 5,
+          "missing_count": 5,
+          "present_count": 0,
+          "missing_rate": 1.0,
+          "dropped": true,
+          "reasons": {
+            "unspecified": 5
+          }
+        },
+        {
+          "field": "jcr_source_label",
+          "label": "JCR分区_原始体系名称",
+          "row_count": 5,
+          "missing_count": 0,
+          "present_count": 5,
+          "missing_rate": 0.0,
+          "dropped": false,
+          "reasons": {}
+        },
+        {
+          "field": "jcr_version",
+          "label": "JCR分区_版本标签",
+          "row_count": 5,
+          "missing_count": 0,
+          "present_count": 5,
+          "missing_rate": 0.0,
+          "dropped": false,
+          "reasons": {}
+        },
+        {
+          "field": "jcr_status",
+          "label": "JCR分区_状态",
+          "row_count": 5,
+          "missing_count": 0,
+          "present_count": 5,
+          "missing_rate": 0.0,
+          "dropped": false,
+          "reasons": {}
+        },
+        {
+          "field": "jcr_subjects",
+          "label": "JCR分区_学科分区",
+          "row_count": 5,
+          "missing_count": 5,
+          "present_count": 0,
+          "missing_rate": 1.0,
+          "dropped": true,
+          "reasons": {
+            "unspecified": 5
+          }
+        },
+        {
+          "field": "journal_partition_source_label",
+          "label": "期刊分区表（中科院）_原始体系名称",
+          "row_count": 5,
+          "missing_count": 0,
+          "present_count": 5,
+          "missing_rate": 0.0,
+          "dropped": false,
+          "reasons": {}
+        },
+        {
+          "field": "journal_partition_version",
+          "label": "期刊分区表（中科院）_版本标签",
+          "row_count": 5,
+          "missing_count": 0,
+          "present_count": 5,
+          "missing_rate": 0.0,
+          "dropped": false,
+          "reasons": {}
+        },
+        {
+          "field": "journal_partition_status",
+          "label": "期刊分区表（中科院）_状态",
+          "row_count": 5,
+          "missing_count": 0,
+          "present_count": 5,
+          "missing_rate": 0.0,
+          "dropped": false,
+          "reasons": {}
+        },
+        {
+          "field": "journal_partition_subjects",
+          "label": "期刊分区表（中科院）_学科分区",
+          "row_count": 5,
+          "missing_count": 0,
+          "present_count": 5,
+          "missing_rate": 0.0,
+          "dropped": false,
+          "reasons": {}
+        },
+        {
+          "field": "xinrui_source_label",
+          "label": "新锐分区_原始体系名称",
+          "row_count": 5,
+          "missing_count": 0,
+          "present_count": 5,
+          "missing_rate": 0.0,
+          "dropped": false,
+          "reasons": {}
+        },
+        {
+          "field": "xinrui_version",
+          "label": "新锐分区_版本标签",
+          "row_count": 5,
+          "missing_count": 0,
+          "present_count": 5,
+          "missing_rate": 0.0,
+          "dropped": false,
+          "reasons": {}
+        },
+        {
+          "field": "xinrui_status",
+          "label": "新锐分区_状态",
+          "row_count": 5,
+          "missing_count": 0,
+          "present_count": 5,
+          "missing_rate": 0.0,
+          "dropped": false,
+          "reasons": {}
+        },
+        {
+          "field": "xinrui_subjects",
+          "label": "新锐分区_学科分区",
+          "row_count": 5,
+          "missing_count": 0,
+          "present_count": 5,
+          "missing_rate": 0.0,
+          "dropped": false,
+          "reasons": {}
+        }
+      ]
+    },
+    {
+      "table": "分区明细",
+      "row_count": 27,
+      "columns": [
+        {
+          "field": "journal_id",
+          "label": "LetPub期刊ID",
+          "row_count": 27,
+          "missing_count": 0,
+          "present_count": 27,
+          "missing_rate": 0.0,
+          "dropped": false,
+          "reasons": {}
+        },
+        {
+          "field": "journal_name",
+          "label": "期刊全称",
+          "row_count": 27,
+          "missing_count": 0,
+          "present_count": 27,
+          "missing_rate": 0.0,
+          "dropped": false,
+          "reasons": {}
+        },
+        {
+          "field": "scheme",
+          "label": "分区体系",
+          "row_count": 27,
+          "missing_count": 0,
+          "present_count": 27,
+          "missing_rate": 0.0,
+          "dropped": false,
+          "reasons": {}
+        },
+        {
+          "field": "source_label",
+          "label": "原始体系名称",
+          "row_count": 27,
+          "missing_count": 0,
+          "present_count": 27,
+          "missing_rate": 0.0,
+          "dropped": false,
+          "reasons": {}
+        },
+        {
+          "field": "version",
+          "label": "版本标签",
+          "row_count": 27,
+          "missing_count": 0,
+          "present_count": 27,
+          "missing_rate": 0.0,
+          "dropped": false,
+          "reasons": {}
+        },
+        {
+          "field": "year",
+          "label": "年份",
+          "row_count": 27,
+          "missing_count": 5,
+          "present_count": 22,
+          "missing_rate": 0.18518518518518517,
+          "dropped": false,
+          "reasons": {
+            "unspecified": 5
+          }
+        },
+        {
+          "field": "status",
+          "label": "状态",
+          "row_count": 27,
+          "missing_count": 0,
+          "present_count": 27,
+          "missing_rate": 0.0,
+          "dropped": false,
+          "reasons": {}
+        },
+        {
+          "field": "level",
+          "label": "学科层级",
+          "row_count": 27,
+          "missing_count": 5,
+          "present_count": 22,
+          "missing_rate": 0.18518518518518517,
+          "dropped": false,
+          "reasons": {
+            "login_required": 5
+          }
+        },
+        {
+          "field": "subject",
+          "label": "学科名称",
+          "row_count": 27,
+          "missing_count": 5,
+          "present_count": 22,
+          "missing_rate": 0.18518518518518517,
+          "dropped": false,
+          "reasons": {
+            "login_required": 5
+          }
+        },
+        {
+          "field": "quartile",
+          "label": "分区",
+          "row_count": 27,
+          "missing_count": 5,
+          "present_count": 22,
+          "missing_rate": 0.18518518518518517,
+          "dropped": false,
+          "reasons": {
+            "login_required": 5
+          }
+        },
+        {
+          "field": "basis",
+          "label": "指标口径",
+          "row_count": 27,
+          "missing_count": 27,
+          "present_count": 0,
+          "missing_rate": 1.0,
+          "dropped": true,
+          "reasons": {
+            "login_required": 5,
+            "unspecified": 22
+          }
+        },
+        {
+          "field": "source_url",
+          "label": "来源链接",
+          "row_count": 27,
+          "missing_count": 0,
+          "present_count": 27,
+          "missing_rate": 0.0,
+          "dropped": false,
+          "reasons": {}
+        },
+        {
+          "field": "fetched_at",
+          "label": "抓取时间",
+          "row_count": 27,
+          "missing_count": 0,
+          "present_count": 27,
+          "missing_rate": 0.0,
+          "dropped": false,
+          "reasons": {}
+        }
+      ]
+    },
+    {
+      "table": "查询记录",
+      "row_count": 9,
+      "columns": [
+        {
+          "field": "input_id",
+          "label": "输入ID",
+          "row_count": 9,
+          "missing_count": 0,
+          "present_count": 9,
+          "missing_rate": 0.0,
+          "dropped": false,
+          "reasons": {}
+        },
+        {
+          "field": "journal_name",
+          "label": "期刊全称",
+          "row_count": 9,
+          "missing_count": 6,
+          "present_count": 3,
+          "missing_rate": 0.6666666666666666,
+          "dropped": false,
+          "reasons": {
+            "unspecified": 6
+          }
+        },
+        {
+          "field": "issn",
+          "label": "ISSN",
+          "row_count": 9,
+          "missing_count": 3,
+          "present_count": 6,
+          "missing_rate": 0.3333333333333333,
+          "dropped": false,
+          "reasons": {
+            "unspecified": 3
+          }
+        },
+        {
+          "field": "raw",
+          "label": "原始输入",
+          "row_count": 9,
+          "missing_count": 9,
+          "present_count": 0,
+          "missing_rate": 1.0,
+          "dropped": true,
+          "reasons": {
+            "unspecified": 9
+          }
+        },
+        {
+          "field": "status",
+          "label": "状态",
+          "row_count": 9,
+          "missing_count": 0,
+          "present_count": 9,
+          "missing_rate": 0.0,
+          "dropped": false,
+          "reasons": {}
+        },
+        {
+          "field": "journal_id",
+          "label": "LetPub期刊ID",
+          "row_count": 9,
+          "missing_count": 2,
+          "present_count": 7,
+          "missing_rate": 0.2222222222222222,
+          "dropped": false,
+          "reasons": {
+            "unspecified": 2
+          }
+        },
+        {
+          "field": "message",
+          "label": "查询说明",
+          "row_count": 9,
+          "missing_count": 0,
+          "present_count": 9,
+          "missing_rate": 0.0,
+          "dropped": false,
+          "reasons": {}
+        }
+      ]
+    },
+    {
+      "table": "候选清单",
+      "row_count": 0,
+      "columns": [
+        {
+          "field": "input_id",
+          "label": "输入ID",
+          "row_count": 0,
+          "missing_count": 0,
+          "present_count": 0,
+          "missing_rate": null,
+          "dropped": false,
+          "reasons": {}
+        },
+        {
+          "field": "journal_id",
+          "label": "LetPub期刊ID",
+          "row_count": 0,
+          "missing_count": 0,
+          "present_count": 0,
+          "missing_rate": null,
+          "dropped": false,
+          "reasons": {}
+        },
+        {
+          "field": "journal_name",
+          "label": "期刊全称",
+          "row_count": 0,
+          "missing_count": 0,
+          "present_count": 0,
+          "missing_rate": null,
+          "dropped": false,
+          "reasons": {}
+        },
+        {
+          "field": "issn",
+          "label": "ISSN",
+          "row_count": 0,
+          "missing_count": 0,
+          "present_count": 0,
+          "missing_rate": null,
+          "dropped": false,
+          "reasons": {}
+        },
+        {
+          "field": "url",
+          "label": "候选链接",
+          "row_count": 0,
+          "missing_count": 0,
+          "present_count": 0,
+          "missing_rate": null,
+          "dropped": false,
+          "reasons": {}
+        },
+        {
+          "field": "reason",
+          "label": "候选原因",
+          "row_count": 0,
+          "missing_count": 0,
+          "present_count": 0,
+          "missing_rate": null,
+          "dropped": false,
+          "reasons": {}
+        }
+      ]
+    }
+  ]
+}

@@ -95,7 +95,7 @@ Ctrl+C 会保存已完成结果。恢复原任务：
 - 四个同名 CSV：UTF-8 BOM 编码，便于 Excel 打开。
 - `results.json`：完整字段、状态、分区数组和输入关联，`schema_version=1`。
 
-汇总以 LetPub 期刊 ID 去重，保持输入首次出现顺序；`input_ids` 可以追溯同一期刊的多条原始输入。导出字段使用稳定英文列名，工作表名称为中文。
+汇总以 LetPub 期刊 ID 去重，保持输入首次出现顺序；`input_ids` 可以追溯同一期刊的多条原始输入。默认使用原始英文列名，工作表名称为中文；可选择中文列名及删除空列，见下节。
 
 主要字段是 `journal_name`、`abbreviation`、`issn`、`eissn`、`impact_factor`、`citescore`、`oa`、`review_time`，另有 `source_url`、`fetched_at`。每个字段有 `_status`、`_raw`、`_version`、`_year` 列。抓取时间为带时区的 ISO 时间。
 
@@ -111,6 +111,47 @@ Ctrl+C 会保存已完成结果。恢复原任务：
 查询状态包括 `matched`、`needs_confirmation`、`not_found`、`invalid`、`failed`、`partial`、`blocked`、`pending`。字段因登录受限仍可算匹配成功；解析失败则记录 `partial`。
 
 退出码：全部匹配为 0；存在未找到、待确认、无效或失败／未完成输入为 2；输入配置或保存错误为 1；Ctrl+C 为 130。
+
+## 自定义导出与缺失统计（v0.2.0）
+
+| 参数 | 可选值 | 默认行为 |
+| --- | --- | --- |
+| `--field-names` | `original` 原始英文，`zh` 中文 | `original` |
+| `--drop-empty-columns` | 删除整列为空的列 | 保留全部列 |
+| `--no-drop-empty-columns` | 明确保留全部列，用于覆盖恢复任务的设置 | 保留全部列 |
+| `--missing-report` | `none`、`terminal`、`file`、`both` | `none`，不输出统计 |
+
+例如，中文表头、删除空列，同时显示终端统计并保存统计文件：
+
+```sh
+.venv/bin/python -m selected_journal query \
+  --input examples/journals.csv --output runs/chinese-journals \
+  --field-names zh --drop-empty-columns --missing-report both
+```
+
+`--field-names` 只翻译字段名，不翻译期刊名、页面原文、状态代码或 OA 值。例如 `impact_factor` 为“影响因子IF”，`impact_factor_status` 为“影响因子IF_状态”，`journal_partition_subjects` 为“期刊分区表（中科院）_学科分区”。原始体系名称依然来自页面。
+
+空值定义为 `null`、空白字符串、空列表或空对象；`0`、`False`、字符串 `unknown` 是有效值。删除空列按四张表各自的数据行判断，**没有数据行的表保留全部表头**。只删除整列为空的列，不删除部分缺失的列，也不删除有值的状态列。恢复后新增记录可能让先前的空列重新出现在输出中。
+
+Excel 与 CSV 使用相同的列名和保留列。`results.json` 始终保留 `journals`、`queries`、`candidates` 的完整原始字段和状态，以便程序读取和追溯。选择中文字段或删除空列时，JSON 另含 `export_view`，其中 `columns` 记录原始字段与输出字段名的对应关系，`rows` 使用相同的中文或英文键及保留列。输入快照、检查点和缓存不因导出设置改变。
+
+缺失统计基于**删空列之前**的四张表。期刊汇总按去重后的期刊数计算；查询记录按输入条数计算，分区明细按学科分区行数计算：
+
+- `terminal`：终端逐表显示缺失字段的“缺失数／总行数（百分比）”，标注已删除列，并列出无缺失列数量。
+- `file`：保存 `missing_values.json` 和 UTF-8 BOM 的 `missing_values.csv`，不打印终端统计。
+- `both`：同时输出上述两种形式。
+- `none`：不输出统计；恢复任务时会移除该目录中旧的统计文件，避免误读过期结果。
+
+统计文件包含表名、原始字段名、输出字段名、总行数、缺失数、非缺失数、缺失率和是否删除列。`missing_rate` 是 0～1 的比例，如 `0.4` 代表 40%；空表缺失率为空值，不视作 0% 或 100%。文件列出全部字段，包括无缺失和已删除的字段。`reasons` 对核心字段和分区内容保留可关联的 `login_required`／`not_provided`／`parse_error` 计数；无法明确关联的空值计为 `unspecified`，不推测原因。指标年份无法确认时为空，也会计入统计。
+
+导出设置保存在 `inputs.json` 的 `export_options` 中。`--resume` 默认沿用；显式参数可覆盖并保存，已完成任务可用此方式重新导出，无需重复抓取：
+
+```sh
+.venv/bin/python -m selected_journal query --resume runs/chinese-journals \
+  --field-names original --no-drop-empty-columns --missing-report file
+```
+
+旧版本任务没有保存导出设置时，恢复使用默认设置。用户中断或批次受阻时，也按所选设置导出已完成数据及统计；缺失统计本身不改变退出码。
 
 ## 验证与样例
 

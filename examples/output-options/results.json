@@ -1,0 +1,1663 @@
+{
+  "schema_version": 1,
+  "journals": [
+    {
+      "journal_id": "6969",
+      "fields": {
+        "journal_name": {
+          "value": "PROTEIN AND PEPTIDE LETTERS",
+          "status": "ok",
+          "raw": "PROTEIN AND PEPTIDE LETTERS",
+          "version": null,
+          "year": null
+        },
+        "abbreviation": {
+          "value": "PROTEIN PEPTIDE LETT",
+          "status": "ok",
+          "raw": "PROTEIN PEPTIDE LETT",
+          "version": null,
+          "year": null
+        },
+        "issn": {
+          "value": "0929-8665",
+          "status": "ok",
+          "raw": "0929-8665",
+          "version": null,
+          "year": null
+        },
+        "eissn": {
+          "value": "1875-5305",
+          "status": "ok",
+          "raw": "1875-5305",
+          "version": null,
+          "year": null
+        },
+        "impact_factor": {
+          "value": null,
+          "status": "login_required",
+          "raw": "注册 或 登录 后，查看IF",
+          "version": "2025-2026最新IF （数据来源于网友提供）",
+          "year": null
+        },
+        "citescore": {
+          "value": 2.8,
+          "status": "ok",
+          "raw": "2.80",
+          "version": "2026年6月最新版",
+          "year": null
+        },
+        "oa": {
+          "value": "closed",
+          "status": "ok",
+          "raw": "No",
+          "version": null,
+          "year": null
+        },
+        "review_time": {
+          "value": "网友分享经验： 平均2.0个月",
+          "status": "ok",
+          "raw": "网友分享经验： 平均2.0个月",
+          "version": null,
+          "year": null
+        }
+      },
+      "classifications": [
+        {
+          "scheme": "jcr",
+          "source_label": "WOS期刊JCR分区 （ 2025-2026年最新版 ）",
+          "version": "2025-2026年最新版",
+          "year": null,
+          "status": "login_required",
+          "entries": []
+        },
+        {
+          "scheme": "xinrui",
+          "source_label": "《新锐期刊分区表》 （ 2026年3月发布 ）",
+          "version": "2026年3月发布",
+          "year": 2026,
+          "status": "ok",
+          "entries": [
+            {
+              "level": "major",
+              "subject": "生物学",
+              "quartile": "4区",
+              "basis": null
+            },
+            {
+              "level": "minor",
+              "subject": "BIOCHEMISTRY & MOLECULAR BIOLOGY 生化与分子生物学",
+              "quartile": "4区",
+              "basis": null
+            }
+          ]
+        },
+        {
+          "scheme": "journal_partition",
+          "source_label": "期刊分区表 （ 2025年3月升级版 ）",
+          "version": "2025年3月升级版",
+          "year": 2025,
+          "status": "ok",
+          "entries": [
+            {
+              "level": "major",
+              "subject": "生物学",
+              "quartile": "4区",
+              "basis": null
+            },
+            {
+              "level": "minor",
+              "subject": "BIOCHEMISTRY & MOLECULAR BIOLOGY 生化与分子生物学",
+              "quartile": "4区",
+              "basis": null
+            }
+          ]
+        }
+      ],
+      "source_url": "https://www.letpub.com.cn/index.php?page=journalapp&view=detail&journalid=6969",
+      "fetched_at": "2026-10-05T11:29:11.761032+00:00",
+      "input_ids": [
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "journal_id": "6054",
+      "fields": {
+        "journal_name": {
+          "value": "NATURE",
+          "status": "ok",
+          "raw": "NATURE",
+          "version": null,
+          "year": null
+        },
+        "abbreviation": {
+          "value": "NATURE",
+          "status": "ok",
+          "raw": "NATURE",
+          "version": null,
+          "year": null
+        },
+        "issn": {
+          "value": "0028-0836",
+          "status": "ok",
+          "raw": "0028-0836",
+          "version": null,
+          "year": null
+        },
+        "eissn": {
+          "value": "1476-4687",
+          "status": "ok",
+          "raw": "1476-4687",
+          "version": null,
+          "year": null
+        },
+        "impact_factor": {
+          "value": null,
+          "status": "login_required",
+          "raw": "注册 或 登录 后，查看IF",
+          "version": "2025-2026最新IF （数据来源于网友提供）",
+          "year": null
+        },
+        "citescore": {
+          "value": 77.7,
+          "status": "ok",
+          "raw": "77.70",
+          "version": "2026年6月最新版",
+          "year": null
+        },
+        "oa": {
+          "value": "closed",
+          "status": "ok",
+          "raw": "No",
+          "version": null,
+          "year": null
+        },
+        "review_time": {
+          "value": "网友分享经验： 平均6.5个月",
+          "status": "ok",
+          "raw": "网友分享经验： 平均6.5个月",
+          "version": null,
+          "year": null
+        }
+      },
+      "classifications": [
+        {
+          "scheme": "jcr",
+          "source_label": "WOS期刊JCR分区 （ 2025-2026年最新版 ）",
+          "version": "2025-2026年最新版",
+          "year": null,
+          "status": "login_required",
+          "entries": []
+        },
+        {
+          "scheme": "xinrui",
+          "source_label": "《新锐期刊分区表》 （ 2026年3月发布 ）",
+          "version": "2026年3月发布",
+          "year": 2026,
+          "status": "ok",
+          "entries": [
+            {
+              "level": "major",
+              "subject": "综合性期刊",
+              "quartile": "1区",
+              "basis": null
+            },
+            {
+              "level": "minor",
+              "subject": "MULTIDISCIPLINARY SCIENCES 综合性期刊",
+              "quartile": "1区",
+              "basis": null
+            }
+          ]
+        },
+        {
+          "scheme": "journal_partition",
+          "source_label": "期刊分区表 （ 2025年3月升级版 ）",
+          "version": "2025年3月升级版",
+          "year": 2025,
+          "status": "ok",
+          "entries": [
+            {
+              "level": "major",
+              "subject": "综合性期刊",
+              "quartile": "1区",
+              "basis": null
+            },
+            {
+              "level": "minor",
+              "subject": "MULTIDISCIPLINARY SCIENCES 综合性期刊",
+              "quartile": "1区",
+              "basis": null
+            }
+          ]
+        }
+      ],
+      "source_url": "https://www.letpub.com.cn/index.php?page=journalapp&view=detail&journalid=6054",
+      "fetched_at": "2026-10-05T11:29:17.524964+00:00",
+      "input_ids": [
+        5
+      ]
+    },
+    {
+      "journal_id": "7393",
+      "fields": {
+        "journal_name": {
+          "value": "SCIENCE",
+          "status": "ok",
+          "raw": "SCIENCE",
+          "version": null,
+          "year": null
+        },
+        "abbreviation": {
+          "value": "SCIENCE",
+          "status": "ok",
+          "raw": "SCIENCE",
+          "version": null,
+          "year": null
+        },
+        "issn": {
+          "value": "0036-8075",
+          "status": "ok",
+          "raw": "0036-8075",
+          "version": null,
+          "year": null
+        },
+        "eissn": {
+          "value": "1095-9203",
+          "status": "ok",
+          "raw": "1095-9203",
+          "version": null,
+          "year": null
+        },
+        "impact_factor": {
+          "value": null,
+          "status": "login_required",
+          "raw": "注册 或 登录 后，查看IF",
+          "version": "2025-2026最新IF （数据来源于网友提供）",
+          "year": null
+        },
+        "citescore": {
+          "value": 44.6,
+          "status": "ok",
+          "raw": "44.60",
+          "version": "2026年6月最新版",
+          "year": null
+        },
+        "oa": {
+          "value": "closed",
+          "status": "ok",
+          "raw": "No",
+          "version": null,
+          "year": null
+        },
+        "review_time": {
+          "value": "网友分享经验： 平均3.3个月",
+          "status": "ok",
+          "raw": "网友分享经验： 平均3.3个月",
+          "version": null,
+          "year": null
+        }
+      },
+      "classifications": [
+        {
+          "scheme": "jcr",
+          "source_label": "WOS期刊JCR分区 （ 2025-2026年最新版 ）",
+          "version": "2025-2026年最新版",
+          "year": null,
+          "status": "login_required",
+          "entries": []
+        },
+        {
+          "scheme": "xinrui",
+          "source_label": "《新锐期刊分区表》 （ 2026年3月发布 ）",
+          "version": "2026年3月发布",
+          "year": 2026,
+          "status": "ok",
+          "entries": [
+            {
+              "level": "major",
+              "subject": "综合性期刊",
+              "quartile": "1区",
+              "basis": null
+            },
+            {
+              "level": "minor",
+              "subject": "MULTIDISCIPLINARY SCIENCES 综合性期刊",
+              "quartile": "1区",
+              "basis": null
+            }
+          ]
+        },
+        {
+          "scheme": "journal_partition",
+          "source_label": "期刊分区表 （ 2025年3月升级版 ）",
+          "version": "2025年3月升级版",
+          "year": 2025,
+          "status": "ok",
+          "entries": [
+            {
+              "level": "major",
+              "subject": "综合性期刊",
+              "quartile": "1区",
+              "basis": null
+            },
+            {
+              "level": "minor",
+              "subject": "MULTIDISCIPLINARY SCIENCES 综合性期刊",
+              "quartile": "1区",
+              "basis": null
+            }
+          ]
+        }
+      ],
+      "source_url": "https://www.letpub.com.cn/index.php?page=journalapp&view=detail&journalid=7393",
+      "fetched_at": "2026-10-05T11:29:25.083360+00:00",
+      "input_ids": [
+        6
+      ]
+    },
+    {
+      "journal_id": "1562",
+      "fields": {
+        "journal_name": {
+          "value": "CELL",
+          "status": "ok",
+          "raw": "CELL",
+          "version": null,
+          "year": null
+        },
+        "abbreviation": {
+          "value": "CELL",
+          "status": "ok",
+          "raw": "CELL",
+          "version": null,
+          "year": null
+        },
+        "issn": {
+          "value": "0092-8674",
+          "status": "ok",
+          "raw": "0092-8674",
+          "version": null,
+          "year": null
+        },
+        "eissn": {
+          "value": "1097-4172",
+          "status": "ok",
+          "raw": "1097-4172",
+          "version": null,
+          "year": null
+        },
+        "impact_factor": {
+          "value": null,
+          "status": "login_required",
+          "raw": "注册 或 登录 后，查看IF",
+          "version": "2025-2026最新IF （数据来源于网友提供）",
+          "year": null
+        },
+        "citescore": {
+          "value": 67.8,
+          "status": "ok",
+          "raw": "67.80",
+          "version": "2026年6月最新版",
+          "year": null
+        },
+        "oa": {
+          "value": "closed",
+          "status": "ok",
+          "raw": "No",
+          "version": null,
+          "year": null
+        },
+        "review_time": {
+          "value": "网友分享经验： 平均2月",
+          "status": "ok",
+          "raw": "网友分享经验： 平均2月",
+          "version": null,
+          "year": null
+        }
+      },
+      "classifications": [
+        {
+          "scheme": "jcr",
+          "source_label": "WOS期刊JCR分区 （ 2025-2026年最新版 ）",
+          "version": "2025-2026年最新版",
+          "year": null,
+          "status": "login_required",
+          "entries": []
+        },
+        {
+          "scheme": "xinrui",
+          "source_label": "《新锐期刊分区表》 （ 2026年3月发布 ）",
+          "version": "2026年3月发布",
+          "year": 2026,
+          "status": "ok",
+          "entries": [
+            {
+              "level": "major",
+              "subject": "生物学",
+              "quartile": "1区",
+              "basis": null
+            },
+            {
+              "level": "minor",
+              "subject": "BIOCHEMISTRY & MOLECULAR BIOLOGY 生化与分子生物学",
+              "quartile": "1区",
+              "basis": null
+            },
+            {
+              "level": "minor",
+              "subject": "CELL BIOLOGY 细胞生物学",
+              "quartile": "1区",
+              "basis": null
+            }
+          ]
+        },
+        {
+          "scheme": "journal_partition",
+          "source_label": "期刊分区表 （ 2025年3月升级版 ）",
+          "version": "2025年3月升级版",
+          "year": 2025,
+          "status": "ok",
+          "entries": [
+            {
+              "level": "major",
+              "subject": "生物学",
+              "quartile": "1区",
+              "basis": null
+            },
+            {
+              "level": "minor",
+              "subject": "BIOCHEMISTRY & MOLECULAR BIOLOGY 生化与分子生物学",
+              "quartile": "1区",
+              "basis": null
+            },
+            {
+              "level": "minor",
+              "subject": "CELL BIOLOGY 细胞生物学",
+              "quartile": "1区",
+              "basis": null
+            }
+          ]
+        }
+      ],
+      "source_url": "https://www.letpub.com.cn/index.php?page=journalapp&view=detail&journalid=1562",
+      "fetched_at": "2026-10-05T11:29:31.578572+00:00",
+      "input_ids": [
+        7
+      ]
+    },
+    {
+      "journal_id": "6775",
+      "fields": {
+        "journal_name": {
+          "value": "PLoS One",
+          "status": "ok",
+          "raw": "PLoS One",
+          "version": null,
+          "year": null
+        },
+        "abbreviation": {
+          "value": "PLOS ONE",
+          "status": "ok",
+          "raw": "PLOS ONE",
+          "version": null,
+          "year": null
+        },
+        "issn": {
+          "value": "1932-6203",
+          "status": "ok",
+          "raw": "1932-6203",
+          "version": null,
+          "year": null
+        },
+        "eissn": {
+          "value": null,
+          "status": "not_provided",
+          "raw": "",
+          "version": null,
+          "year": null
+        },
+        "impact_factor": {
+          "value": null,
+          "status": "login_required",
+          "raw": "注册 或 登录 后，查看IF",
+          "version": "2025-2026最新IF （数据来源于网友提供）",
+          "year": null
+        },
+        "citescore": {
+          "value": 4.8,
+          "status": "ok",
+          "raw": "4.80",
+          "version": "2026年6月最新版",
+          "year": null
+        },
+        "oa": {
+          "value": "open",
+          "status": "ok",
+          "raw": "Yes",
+          "version": null,
+          "year": null
+        },
+        "review_time": {
+          "value": "网友分享经验： 平均2.6个月",
+          "status": "ok",
+          "raw": "网友分享经验： 平均2.6个月",
+          "version": null,
+          "year": null
+        }
+      },
+      "classifications": [
+        {
+          "scheme": "jcr",
+          "source_label": "WOS期刊JCR分区 （ 2025-2026年最新版 ）",
+          "version": "2025-2026年最新版",
+          "year": null,
+          "status": "login_required",
+          "entries": []
+        },
+        {
+          "scheme": "xinrui",
+          "source_label": "《新锐期刊分区表》 （ 2026年3月发布 ）",
+          "version": "2026年3月发布",
+          "year": 2026,
+          "status": "ok",
+          "entries": [
+            {
+              "level": "major",
+              "subject": "综合性期刊",
+              "quartile": "3区",
+              "basis": null
+            },
+            {
+              "level": "minor",
+              "subject": "MULTIDISCIPLINARY SCIENCES 综合性期刊",
+              "quartile": "3区",
+              "basis": null
+            }
+          ]
+        },
+        {
+          "scheme": "journal_partition",
+          "source_label": "期刊分区表 （ 2025年3月升级版 ）",
+          "version": "2025年3月升级版",
+          "year": 2025,
+          "status": "ok",
+          "entries": [
+            {
+              "level": "major",
+              "subject": "综合性期刊",
+              "quartile": "3区",
+              "basis": null
+            },
+            {
+              "level": "minor",
+              "subject": "MULTIDISCIPLINARY SCIENCES 综合性期刊",
+              "quartile": "3区",
+              "basis": null
+            }
+          ]
+        }
+      ],
+      "source_url": "https://www.letpub.com.cn/index.php?page=journalapp&view=detail&journalid=6775",
+      "fetched_at": "2026-10-05T11:29:41.920547+00:00",
+      "input_ids": [
+        8
+      ]
+    }
+  ],
+  "queries": [
+    {
+      "input_id": 2,
+      "journal_name": "PROTEIN AND PEPTIDE LETTERS",
+      "issn": "",
+      "raw": null,
+      "error": null,
+      "status": "matched",
+      "message": "精确匹配",
+      "journal_id": "6969"
+    },
+    {
+      "input_id": 3,
+      "journal_name": "",
+      "issn": "0929-8665",
+      "raw": null,
+      "error": null,
+      "status": "matched",
+      "message": "精确匹配",
+      "journal_id": "6969"
+    },
+    {
+      "input_id": 4,
+      "journal_name": "",
+      "issn": "1875-5305",
+      "raw": null,
+      "error": null,
+      "status": "matched",
+      "message": "精确匹配",
+      "journal_id": "6969"
+    },
+    {
+      "input_id": 5,
+      "journal_name": "",
+      "issn": "0028-0836",
+      "raw": null,
+      "error": null,
+      "status": "matched",
+      "message": "精确匹配",
+      "journal_id": "6054"
+    },
+    {
+      "input_id": 6,
+      "journal_name": "",
+      "issn": "0036-8075",
+      "raw": null,
+      "error": null,
+      "status": "matched",
+      "message": "精确匹配",
+      "journal_id": "7393"
+    },
+    {
+      "input_id": 7,
+      "journal_name": "",
+      "issn": "0092-8674",
+      "raw": null,
+      "error": null,
+      "status": "matched",
+      "message": "精确匹配",
+      "journal_id": "1562"
+    },
+    {
+      "input_id": 8,
+      "journal_name": "PLOS ONE",
+      "issn": "",
+      "raw": null,
+      "error": null,
+      "status": "matched",
+      "message": "精确匹配",
+      "journal_id": "6775"
+    },
+    {
+      "input_id": 9,
+      "journal_name": "CODEX NONEXISTENT JOURNAL 20261005",
+      "issn": "",
+      "raw": null,
+      "error": null,
+      "status": "not_found",
+      "message": "LetPub 搜索没有返回期刊记录",
+      "journal_id": null
+    },
+    {
+      "input_id": 10,
+      "journal_name": "",
+      "issn": "0929-8666",
+      "raw": null,
+      "error": "ISSN 校验位不正确",
+      "status": "invalid",
+      "message": "ISSN 校验位不正确",
+      "journal_id": null
+    }
+  ],
+  "candidates": [],
+  "export_view": {
+    "field_names": "zh",
+    "drop_empty_columns": true,
+    "tables": [
+      {
+        "table": "期刊汇总",
+        "columns": [
+          {
+            "field": "journal_id",
+            "label": "LetPub期刊ID"
+          },
+          {
+            "field": "input_ids",
+            "label": "关联输入ID"
+          },
+          {
+            "field": "source_url",
+            "label": "来源链接"
+          },
+          {
+            "field": "fetched_at",
+            "label": "抓取时间"
+          },
+          {
+            "field": "journal_name",
+            "label": "期刊全称"
+          },
+          {
+            "field": "journal_name_status",
+            "label": "期刊全称_状态"
+          },
+          {
+            "field": "journal_name_raw",
+            "label": "期刊全称_页面原文"
+          },
+          {
+            "field": "abbreviation",
+            "label": "期刊简称"
+          },
+          {
+            "field": "abbreviation_status",
+            "label": "期刊简称_状态"
+          },
+          {
+            "field": "abbreviation_raw",
+            "label": "期刊简称_页面原文"
+          },
+          {
+            "field": "issn",
+            "label": "ISSN"
+          },
+          {
+            "field": "issn_status",
+            "label": "ISSN_状态"
+          },
+          {
+            "field": "issn_raw",
+            "label": "ISSN_页面原文"
+          },
+          {
+            "field": "eissn",
+            "label": "eISSN"
+          },
+          {
+            "field": "eissn_status",
+            "label": "eISSN_状态"
+          },
+          {
+            "field": "eissn_raw",
+            "label": "eISSN_页面原文"
+          },
+          {
+            "field": "impact_factor_status",
+            "label": "影响因子IF_状态"
+          },
+          {
+            "field": "impact_factor_raw",
+            "label": "影响因子IF_页面原文"
+          },
+          {
+            "field": "impact_factor_version",
+            "label": "影响因子IF_版本标签"
+          },
+          {
+            "field": "citescore",
+            "label": "CiteScore"
+          },
+          {
+            "field": "citescore_status",
+            "label": "CiteScore_状态"
+          },
+          {
+            "field": "citescore_raw",
+            "label": "CiteScore_页面原文"
+          },
+          {
+            "field": "citescore_version",
+            "label": "CiteScore_版本标签"
+          },
+          {
+            "field": "oa",
+            "label": "开放获取状态"
+          },
+          {
+            "field": "oa_status",
+            "label": "开放获取状态_状态"
+          },
+          {
+            "field": "oa_raw",
+            "label": "开放获取状态_页面原文"
+          },
+          {
+            "field": "review_time",
+            "label": "审稿周期"
+          },
+          {
+            "field": "review_time_status",
+            "label": "审稿周期_状态"
+          },
+          {
+            "field": "review_time_raw",
+            "label": "审稿周期_页面原文"
+          },
+          {
+            "field": "jcr_source_label",
+            "label": "JCR分区_原始体系名称"
+          },
+          {
+            "field": "jcr_version",
+            "label": "JCR分区_版本标签"
+          },
+          {
+            "field": "jcr_status",
+            "label": "JCR分区_状态"
+          },
+          {
+            "field": "journal_partition_source_label",
+            "label": "期刊分区表（中科院）_原始体系名称"
+          },
+          {
+            "field": "journal_partition_version",
+            "label": "期刊分区表（中科院）_版本标签"
+          },
+          {
+            "field": "journal_partition_status",
+            "label": "期刊分区表（中科院）_状态"
+          },
+          {
+            "field": "journal_partition_subjects",
+            "label": "期刊分区表（中科院）_学科分区"
+          },
+          {
+            "field": "xinrui_source_label",
+            "label": "新锐分区_原始体系名称"
+          },
+          {
+            "field": "xinrui_version",
+            "label": "新锐分区_版本标签"
+          },
+          {
+            "field": "xinrui_status",
+            "label": "新锐分区_状态"
+          },
+          {
+            "field": "xinrui_subjects",
+            "label": "新锐分区_学科分区"
+          }
+        ],
+        "rows": [
+          {
+            "LetPub期刊ID": "6969",
+            "关联输入ID": [
+              2,
+              3,
+              4
+            ],
+            "来源链接": "https://www.letpub.com.cn/index.php?page=journalapp&view=detail&journalid=6969",
+            "抓取时间": "2026-10-05T11:29:11.761032+00:00",
+            "期刊全称": "PROTEIN AND PEPTIDE LETTERS",
+            "期刊全称_状态": "ok",
+            "期刊全称_页面原文": "PROTEIN AND PEPTIDE LETTERS",
+            "期刊简称": "PROTEIN PEPTIDE LETT",
+            "期刊简称_状态": "ok",
+            "期刊简称_页面原文": "PROTEIN PEPTIDE LETT",
+            "ISSN": "0929-8665",
+            "ISSN_状态": "ok",
+            "ISSN_页面原文": "0929-8665",
+            "eISSN": "1875-5305",
+            "eISSN_状态": "ok",
+            "eISSN_页面原文": "1875-5305",
+            "影响因子IF_状态": "login_required",
+            "影响因子IF_页面原文": "注册 或 登录 后，查看IF",
+            "影响因子IF_版本标签": "2025-2026最新IF （数据来源于网友提供）",
+            "CiteScore": 2.8,
+            "CiteScore_状态": "ok",
+            "CiteScore_页面原文": "2.80",
+            "CiteScore_版本标签": "2026年6月最新版",
+            "开放获取状态": "closed",
+            "开放获取状态_状态": "ok",
+            "开放获取状态_页面原文": "No",
+            "审稿周期": "网友分享经验： 平均2.0个月",
+            "审稿周期_状态": "ok",
+            "审稿周期_页面原文": "网友分享经验： 平均2.0个月",
+            "JCR分区_原始体系名称": "WOS期刊JCR分区 （ 2025-2026年最新版 ）",
+            "JCR分区_版本标签": "2025-2026年最新版",
+            "JCR分区_状态": "login_required",
+            "期刊分区表（中科院）_原始体系名称": "期刊分区表 （ 2025年3月升级版 ）",
+            "期刊分区表（中科院）_版本标签": "2025年3月升级版",
+            "期刊分区表（中科院）_状态": "ok",
+            "期刊分区表（中科院）_学科分区": "major: 生物学 4区; minor: BIOCHEMISTRY & MOLECULAR BIOLOGY 生化与分子生物学 4区",
+            "新锐分区_原始体系名称": "《新锐期刊分区表》 （ 2026年3月发布 ）",
+            "新锐分区_版本标签": "2026年3月发布",
+            "新锐分区_状态": "ok",
+            "新锐分区_学科分区": "major: 生物学 4区; minor: BIOCHEMISTRY & MOLECULAR BIOLOGY 生化与分子生物学 4区"
+          },
+          {
+            "LetPub期刊ID": "6054",
+            "关联输入ID": [
+              5
+            ],
+            "来源链接": "https://www.letpub.com.cn/index.php?page=journalapp&view=detail&journalid=6054",
+            "抓取时间": "2026-10-05T11:29:17.524964+00:00",
+            "期刊全称": "NATURE",
+            "期刊全称_状态": "ok",
+            "期刊全称_页面原文": "NATURE",
+            "期刊简称": "NATURE",
+            "期刊简称_状态": "ok",
+            "期刊简称_页面原文": "NATURE",
+            "ISSN": "0028-0836",
+            "ISSN_状态": "ok",
+            "ISSN_页面原文": "0028-0836",
+            "eISSN": "1476-4687",
+            "eISSN_状态": "ok",
+            "eISSN_页面原文": "1476-4687",
+            "影响因子IF_状态": "login_required",
+            "影响因子IF_页面原文": "注册 或 登录 后，查看IF",
+            "影响因子IF_版本标签": "2025-2026最新IF （数据来源于网友提供）",
+            "CiteScore": 77.7,
+            "CiteScore_状态": "ok",
+            "CiteScore_页面原文": "77.70",
+            "CiteScore_版本标签": "2026年6月最新版",
+            "开放获取状态": "closed",
+            "开放获取状态_状态": "ok",
+            "开放获取状态_页面原文": "No",
+            "审稿周期": "网友分享经验： 平均6.5个月",
+            "审稿周期_状态": "ok",
+            "审稿周期_页面原文": "网友分享经验： 平均6.5个月",
+            "JCR分区_原始体系名称": "WOS期刊JCR分区 （ 2025-2026年最新版 ）",
+            "JCR分区_版本标签": "2025-2026年最新版",
+            "JCR分区_状态": "login_required",
+            "期刊分区表（中科院）_原始体系名称": "期刊分区表 （ 2025年3月升级版 ）",
+            "期刊分区表（中科院）_版本标签": "2025年3月升级版",
+            "期刊分区表（中科院）_状态": "ok",
+            "期刊分区表（中科院）_学科分区": "major: 综合性期刊 1区; minor: MULTIDISCIPLINARY SCIENCES 综合性期刊 1区",
+            "新锐分区_原始体系名称": "《新锐期刊分区表》 （ 2026年3月发布 ）",
+            "新锐分区_版本标签": "2026年3月发布",
+            "新锐分区_状态": "ok",
+            "新锐分区_学科分区": "major: 综合性期刊 1区; minor: MULTIDISCIPLINARY SCIENCES 综合性期刊 1区"
+          },
+          {
+            "LetPub期刊ID": "7393",
+            "关联输入ID": [
+              6
+            ],
+            "来源链接": "https://www.letpub.com.cn/index.php?page=journalapp&view=detail&journalid=7393",
+            "抓取时间": "2026-10-05T11:29:25.083360+00:00",
+            "期刊全称": "SCIENCE",
+            "期刊全称_状态": "ok",
+            "期刊全称_页面原文": "SCIENCE",
+            "期刊简称": "SCIENCE",
+            "期刊简称_状态": "ok",
+            "期刊简称_页面原文": "SCIENCE",
+            "ISSN": "0036-8075",
+            "ISSN_状态": "ok",
+            "ISSN_页面原文": "0036-8075",
+            "eISSN": "1095-9203",
+            "eISSN_状态": "ok",
+            "eISSN_页面原文": "1095-9203",
+            "影响因子IF_状态": "login_required",
+            "影响因子IF_页面原文": "注册 或 登录 后，查看IF",
+            "影响因子IF_版本标签": "2025-2026最新IF （数据来源于网友提供）",
+            "CiteScore": 44.6,
+            "CiteScore_状态": "ok",
+            "CiteScore_页面原文": "44.60",
+            "CiteScore_版本标签": "2026年6月最新版",
+            "开放获取状态": "closed",
+            "开放获取状态_状态": "ok",
+            "开放获取状态_页面原文": "No",
+            "审稿周期": "网友分享经验： 平均3.3个月",
+            "审稿周期_状态": "ok",
+            "审稿周期_页面原文": "网友分享经验： 平均3.3个月",
+            "JCR分区_原始体系名称": "WOS期刊JCR分区 （ 2025-2026年最新版 ）",
+            "JCR分区_版本标签": "2025-2026年最新版",
+            "JCR分区_状态": "login_required",
+            "期刊分区表（中科院）_原始体系名称": "期刊分区表 （ 2025年3月升级版 ）",
+            "期刊分区表（中科院）_版本标签": "2025年3月升级版",
+            "期刊分区表（中科院）_状态": "ok",
+            "期刊分区表（中科院）_学科分区": "major: 综合性期刊 1区; minor: MULTIDISCIPLINARY SCIENCES 综合性期刊 1区",
+            "新锐分区_原始体系名称": "《新锐期刊分区表》 （ 2026年3月发布 ）",
+            "新锐分区_版本标签": "2026年3月发布",
+            "新锐分区_状态": "ok",
+            "新锐分区_学科分区": "major: 综合性期刊 1区; minor: MULTIDISCIPLINARY SCIENCES 综合性期刊 1区"
+          },
+          {
+            "LetPub期刊ID": "1562",
+            "关联输入ID": [
+              7
+            ],
+            "来源链接": "https://www.letpub.com.cn/index.php?page=journalapp&view=detail&journalid=1562",
+            "抓取时间": "2026-10-05T11:29:31.578572+00:00",
+            "期刊全称": "CELL",
+            "期刊全称_状态": "ok",
+            "期刊全称_页面原文": "CELL",
+            "期刊简称": "CELL",
+            "期刊简称_状态": "ok",
+            "期刊简称_页面原文": "CELL",
+            "ISSN": "0092-8674",
+            "ISSN_状态": "ok",
+            "ISSN_页面原文": "0092-8674",
+            "eISSN": "1097-4172",
+            "eISSN_状态": "ok",
+            "eISSN_页面原文": "1097-4172",
+            "影响因子IF_状态": "login_required",
+            "影响因子IF_页面原文": "注册 或 登录 后，查看IF",
+            "影响因子IF_版本标签": "2025-2026最新IF （数据来源于网友提供）",
+            "CiteScore": 67.8,
+            "CiteScore_状态": "ok",
+            "CiteScore_页面原文": "67.80",
+            "CiteScore_版本标签": "2026年6月最新版",
+            "开放获取状态": "closed",
+            "开放获取状态_状态": "ok",
+            "开放获取状态_页面原文": "No",
+            "审稿周期": "网友分享经验： 平均2月",
+            "审稿周期_状态": "ok",
+            "审稿周期_页面原文": "网友分享经验： 平均2月",
+            "JCR分区_原始体系名称": "WOS期刊JCR分区 （ 2025-2026年最新版 ）",
+            "JCR分区_版本标签": "2025-2026年最新版",
+            "JCR分区_状态": "login_required",
+            "期刊分区表（中科院）_原始体系名称": "期刊分区表 （ 2025年3月升级版 ）",
+            "期刊分区表（中科院）_版本标签": "2025年3月升级版",
+            "期刊分区表（中科院）_状态": "ok",
+            "期刊分区表（中科院）_学科分区": "major: 生物学 1区; minor: BIOCHEMISTRY & MOLECULAR BIOLOGY 生化与分子生物学 1区; minor: CELL BIOLOGY 细胞生物学 1区",
+            "新锐分区_原始体系名称": "《新锐期刊分区表》 （ 2026年3月发布 ）",
+            "新锐分区_版本标签": "2026年3月发布",
+            "新锐分区_状态": "ok",
+            "新锐分区_学科分区": "major: 生物学 1区; minor: BIOCHEMISTRY & MOLECULAR BIOLOGY 生化与分子生物学 1区; minor: CELL BIOLOGY 细胞生物学 1区"
+          },
+          {
+            "LetPub期刊ID": "6775",
+            "关联输入ID": [
+              8
+            ],
+            "来源链接": "https://www.letpub.com.cn/index.php?page=journalapp&view=detail&journalid=6775",
+            "抓取时间": "2026-10-05T11:29:41.920547+00:00",
+            "期刊全称": "PLoS One",
+            "期刊全称_状态": "ok",
+            "期刊全称_页面原文": "PLoS One",
+            "期刊简称": "PLOS ONE",
+            "期刊简称_状态": "ok",
+            "期刊简称_页面原文": "PLOS ONE",
+            "ISSN": "1932-6203",
+            "ISSN_状态": "ok",
+            "ISSN_页面原文": "1932-6203",
+            "eISSN": null,
+            "eISSN_状态": "not_provided",
+            "eISSN_页面原文": "",
+            "影响因子IF_状态": "login_required",
+            "影响因子IF_页面原文": "注册 或 登录 后，查看IF",
+            "影响因子IF_版本标签": "2025-2026最新IF （数据来源于网友提供）",
+            "CiteScore": 4.8,
+            "CiteScore_状态": "ok",
+            "CiteScore_页面原文": "4.80",
+            "CiteScore_版本标签": "2026年6月最新版",
+            "开放获取状态": "open",
+            "开放获取状态_状态": "ok",
+            "开放获取状态_页面原文": "Yes",
+            "审稿周期": "网友分享经验： 平均2.6个月",
+            "审稿周期_状态": "ok",
+            "审稿周期_页面原文": "网友分享经验： 平均2.6个月",
+            "JCR分区_原始体系名称": "WOS期刊JCR分区 （ 2025-2026年最新版 ）",
+            "JCR分区_版本标签": "2025-2026年最新版",
+            "JCR分区_状态": "login_required",
+            "期刊分区表（中科院）_原始体系名称": "期刊分区表 （ 2025年3月升级版 ）",
+            "期刊分区表（中科院）_版本标签": "2025年3月升级版",
+            "期刊分区表（中科院）_状态": "ok",
+            "期刊分区表（中科院）_学科分区": "major: 综合性期刊 3区; minor: MULTIDISCIPLINARY SCIENCES 综合性期刊 3区",
+            "新锐分区_原始体系名称": "《新锐期刊分区表》 （ 2026年3月发布 ）",
+            "新锐分区_版本标签": "2026年3月发布",
+            "新锐分区_状态": "ok",
+            "新锐分区_学科分区": "major: 综合性期刊 3区; minor: MULTIDISCIPLINARY SCIENCES 综合性期刊 3区"
+          }
+        ]
+      },
+      {
+        "table": "分区明细",
+        "columns": [
+          {
+            "field": "journal_id",
+            "label": "LetPub期刊ID"
+          },
+          {
+            "field": "journal_name",
+            "label": "期刊全称"
+          },
+          {
+            "field": "scheme",
+            "label": "分区体系"
+          },
+          {
+            "field": "source_label",
+            "label": "原始体系名称"
+          },
+          {
+            "field": "version",
+            "label": "版本标签"
+          },
+          {
+            "field": "year",
+            "label": "年份"
+          },
+          {
+            "field": "status",
+            "label": "状态"
+          },
+          {
+            "field": "level",
+            "label": "学科层级"
+          },
+          {
+            "field": "subject",
+            "label": "学科名称"
+          },
+          {
+            "field": "quartile",
+            "label": "分区"
+          },
+          {
+            "field": "source_url",
+            "label": "来源链接"
+          },
+          {
+            "field": "fetched_at",
+            "label": "抓取时间"
+          }
+        ],
+        "rows": [
+          {
+            "LetPub期刊ID": "6969",
+            "期刊全称": "PROTEIN AND PEPTIDE LETTERS",
+            "分区体系": "jcr",
+            "原始体系名称": "WOS期刊JCR分区 （ 2025-2026年最新版 ）",
+            "版本标签": "2025-2026年最新版",
+            "年份": null,
+            "状态": "login_required",
+            "学科层级": null,
+            "学科名称": null,
+            "分区": null,
+            "来源链接": "https://www.letpub.com.cn/index.php?page=journalapp&view=detail&journalid=6969",
+            "抓取时间": "2026-10-05T11:29:11.761032+00:00"
+          },
+          {
+            "LetPub期刊ID": "6969",
+            "期刊全称": "PROTEIN AND PEPTIDE LETTERS",
+            "分区体系": "xinrui",
+            "原始体系名称": "《新锐期刊分区表》 （ 2026年3月发布 ）",
+            "版本标签": "2026年3月发布",
+            "年份": 2026,
+            "状态": "ok",
+            "学科层级": "major",
+            "学科名称": "生物学",
+            "分区": "4区",
+            "来源链接": "https://www.letpub.com.cn/index.php?page=journalapp&view=detail&journalid=6969",
+            "抓取时间": "2026-10-05T11:29:11.761032+00:00"
+          },
+          {
+            "LetPub期刊ID": "6969",
+            "期刊全称": "PROTEIN AND PEPTIDE LETTERS",
+            "分区体系": "xinrui",
+            "原始体系名称": "《新锐期刊分区表》 （ 2026年3月发布 ）",
+            "版本标签": "2026年3月发布",
+            "年份": 2026,
+            "状态": "ok",
+            "学科层级": "minor",
+            "学科名称": "BIOCHEMISTRY & MOLECULAR BIOLOGY 生化与分子生物学",
+            "分区": "4区",
+            "来源链接": "https://www.letpub.com.cn/index.php?page=journalapp&view=detail&journalid=6969",
+            "抓取时间": "2026-10-05T11:29:11.761032+00:00"
+          },
+          {
+            "LetPub期刊ID": "6969",
+            "期刊全称": "PROTEIN AND PEPTIDE LETTERS",
+            "分区体系": "journal_partition",
+            "原始体系名称": "期刊分区表 （ 2025年3月升级版 ）",
+            "版本标签": "2025年3月升级版",
+            "年份": 2025,
+            "状态": "ok",
+            "学科层级": "major",
+            "学科名称": "生物学",
+            "分区": "4区",
+            "来源链接": "https://www.letpub.com.cn/index.php?page=journalapp&view=detail&journalid=6969",
+            "抓取时间": "2026-10-05T11:29:11.761032+00:00"
+          },
+          {
+            "LetPub期刊ID": "6969",
+            "期刊全称": "PROTEIN AND PEPTIDE LETTERS",
+            "分区体系": "journal_partition",
+            "原始体系名称": "期刊分区表 （ 2025年3月升级版 ）",
+            "版本标签": "2025年3月升级版",
+            "年份": 2025,
+            "状态": "ok",
+            "学科层级": "minor",
+            "学科名称": "BIOCHEMISTRY & MOLECULAR BIOLOGY 生化与分子生物学",
+            "分区": "4区",
+            "来源链接": "https://www.letpub.com.cn/index.php?page=journalapp&view=detail&journalid=6969",
+            "抓取时间": "2026-10-05T11:29:11.761032+00:00"
+          },
+          {
+            "LetPub期刊ID": "6054",
+            "期刊全称": "NATURE",
+            "分区体系": "jcr",
+            "原始体系名称": "WOS期刊JCR分区 （ 2025-2026年最新版 ）",
+            "版本标签": "2025-2026年最新版",
+            "年份": null,
+            "状态": "login_required",
+            "学科层级": null,
+            "学科名称": null,
+            "分区": null,
+            "来源链接": "https://www.letpub.com.cn/index.php?page=journalapp&view=detail&journalid=6054",
+            "抓取时间": "2026-10-05T11:29:17.524964+00:00"
+          },
+          {
+            "LetPub期刊ID": "6054",
+            "期刊全称": "NATURE",
+            "分区体系": "xinrui",
+            "原始体系名称": "《新锐期刊分区表》 （ 2026年3月发布 ）",
+            "版本标签": "2026年3月发布",
+            "年份": 2026,
+            "状态": "ok",
+            "学科层级": "major",
+            "学科名称": "综合性期刊",
+            "分区": "1区",
+            "来源链接": "https://www.letpub.com.cn/index.php?page=journalapp&view=detail&journalid=6054",
+            "抓取时间": "2026-10-05T11:29:17.524964+00:00"
+          },
+          {
+            "LetPub期刊ID": "6054",
+            "期刊全称": "NATURE",
+            "分区体系": "xinrui",
+            "原始体系名称": "《新锐期刊分区表》 （ 2026年3月发布 ）",
+            "版本标签": "2026年3月发布",
+            "年份": 2026,
+            "状态": "ok",
+            "学科层级": "minor",
+            "学科名称": "MULTIDISCIPLINARY SCIENCES 综合性期刊",
+            "分区": "1区",
+            "来源链接": "https://www.letpub.com.cn/index.php?page=journalapp&view=detail&journalid=6054",
+            "抓取时间": "2026-10-05T11:29:17.524964+00:00"
+          },
+          {
+            "LetPub期刊ID": "6054",
+            "期刊全称": "NATURE",
+            "分区体系": "journal_partition",
+            "原始体系名称": "期刊分区表 （ 2025年3月升级版 ）",
+            "版本标签": "2025年3月升级版",
+            "年份": 2025,
+            "状态": "ok",
+            "学科层级": "major",
+            "学科名称": "综合性期刊",
+            "分区": "1区",
+            "来源链接": "https://www.letpub.com.cn/index.php?page=journalapp&view=detail&journalid=6054",
+            "抓取时间": "2026-10-05T11:29:17.524964+00:00"
+          },
+          {
+            "LetPub期刊ID": "6054",
+            "期刊全称": "NATURE",
+            "分区体系": "journal_partition",
+            "原始体系名称": "期刊分区表 （ 2025年3月升级版 ）",
+            "版本标签": "2025年3月升级版",
+            "年份": 2025,
+            "状态": "ok",
+            "学科层级": "minor",
+            "学科名称": "MULTIDISCIPLINARY SCIENCES 综合性期刊",
+            "分区": "1区",
+            "来源链接": "https://www.letpub.com.cn/index.php?page=journalapp&view=detail&journalid=6054",
+            "抓取时间": "2026-10-05T11:29:17.524964+00:00"
+          },
+          {
+            "LetPub期刊ID": "7393",
+            "期刊全称": "SCIENCE",
+            "分区体系": "jcr",
+            "原始体系名称": "WOS期刊JCR分区 （ 2025-2026年最新版 ）",
+            "版本标签": "2025-2026年最新版",
+            "年份": null,
+            "状态": "login_required",
+            "学科层级": null,
+            "学科名称": null,
+            "分区": null,
+            "来源链接": "https://www.letpub.com.cn/index.php?page=journalapp&view=detail&journalid=7393",
+            "抓取时间": "2026-10-05T11:29:25.083360+00:00"
+          },
+          {
+            "LetPub期刊ID": "7393",
+            "期刊全称": "SCIENCE",
+            "分区体系": "xinrui",
+            "原始体系名称": "《新锐期刊分区表》 （ 2026年3月发布 ）",
+            "版本标签": "2026年3月发布",
+            "年份": 2026,
+            "状态": "ok",
+            "学科层级": "major",
+            "学科名称": "综合性期刊",
+            "分区": "1区",
+            "来源链接": "https://www.letpub.com.cn/index.php?page=journalapp&view=detail&journalid=7393",
+            "抓取时间": "2026-10-05T11:29:25.083360+00:00"
+          },
+          {
+            "LetPub期刊ID": "7393",
+            "期刊全称": "SCIENCE",
+            "分区体系": "xinrui",
+            "原始体系名称": "《新锐期刊分区表》 （ 2026年3月发布 ）",
+            "版本标签": "2026年3月发布",
+            "年份": 2026,
+            "状态": "ok",
+            "学科层级": "minor",
+            "学科名称": "MULTIDISCIPLINARY SCIENCES 综合性期刊",
+            "分区": "1区",
+            "来源链接": "https://www.letpub.com.cn/index.php?page=journalapp&view=detail&journalid=7393",
+            "抓取时间": "2026-10-05T11:29:25.083360+00:00"
+          },
+          {
+            "LetPub期刊ID": "7393",
+            "期刊全称": "SCIENCE",
+            "分区体系": "journal_partition",
+            "原始体系名称": "期刊分区表 （ 2025年3月升级版 ）",
+            "版本标签": "2025年3月升级版",
+            "年份": 2025,
+            "状态": "ok",
+            "学科层级": "major",
+            "学科名称": "综合性期刊",
+            "分区": "1区",
+            "来源链接": "https://www.letpub.com.cn/index.php?page=journalapp&view=detail&journalid=7393",
+            "抓取时间": "2026-10-05T11:29:25.083360+00:00"
+          },
+          {
+            "LetPub期刊ID": "7393",
+            "期刊全称": "SCIENCE",
+            "分区体系": "journal_partition",
+            "原始体系名称": "期刊分区表 （ 2025年3月升级版 ）",
+            "版本标签": "2025年3月升级版",
+            "年份": 2025,
+            "状态": "ok",
+            "学科层级": "minor",
+            "学科名称": "MULTIDISCIPLINARY SCIENCES 综合性期刊",
+            "分区": "1区",
+            "来源链接": "https://www.letpub.com.cn/index.php?page=journalapp&view=detail&journalid=7393",
+            "抓取时间": "2026-10-05T11:29:25.083360+00:00"
+          },
+          {
+            "LetPub期刊ID": "1562",
+            "期刊全称": "CELL",
+            "分区体系": "jcr",
+            "原始体系名称": "WOS期刊JCR分区 （ 2025-2026年最新版 ）",
+            "版本标签": "2025-2026年最新版",
+            "年份": null,
+            "状态": "login_required",
+            "学科层级": null,
+            "学科名称": null,
+            "分区": null,
+            "来源链接": "https://www.letpub.com.cn/index.php?page=journalapp&view=detail&journalid=1562",
+            "抓取时间": "2026-10-05T11:29:31.578572+00:00"
+          },
+          {
+            "LetPub期刊ID": "1562",
+            "期刊全称": "CELL",
+            "分区体系": "xinrui",
+            "原始体系名称": "《新锐期刊分区表》 （ 2026年3月发布 ）",
+            "版本标签": "2026年3月发布",
+            "年份": 2026,
+            "状态": "ok",
+            "学科层级": "major",
+            "学科名称": "生物学",
+            "分区": "1区",
+            "来源链接": "https://www.letpub.com.cn/index.php?page=journalapp&view=detail&journalid=1562",
+            "抓取时间": "2026-10-05T11:29:31.578572+00:00"
+          },
+          {
+            "LetPub期刊ID": "1562",
+            "期刊全称": "CELL",
+            "分区体系": "xinrui",
+            "原始体系名称": "《新锐期刊分区表》 （ 2026年3月发布 ）",
+            "版本标签": "2026年3月发布",
+            "年份": 2026,
+            "状态": "ok",
+            "学科层级": "minor",
+            "学科名称": "BIOCHEMISTRY & MOLECULAR BIOLOGY 生化与分子生物学",
+            "分区": "1区",
+            "来源链接": "https://www.letpub.com.cn/index.php?page=journalapp&view=detail&journalid=1562",
+            "抓取时间": "2026-10-05T11:29:31.578572+00:00"
+          },
+          {
+            "LetPub期刊ID": "1562",
+            "期刊全称": "CELL",
+            "分区体系": "xinrui",
+            "原始体系名称": "《新锐期刊分区表》 （ 2026年3月发布 ）",
+            "版本标签": "2026年3月发布",
+            "年份": 2026,
+            "状态": "ok",
+            "学科层级": "minor",
+            "学科名称": "CELL BIOLOGY 细胞生物学",
+            "分区": "1区",
+            "来源链接": "https://www.letpub.com.cn/index.php?page=journalapp&view=detail&journalid=1562",
+            "抓取时间": "2026-10-05T11:29:31.578572+00:00"
+          },
+          {
+            "LetPub期刊ID": "1562",
+            "期刊全称": "CELL",
+            "分区体系": "journal_partition",
+            "原始体系名称": "期刊分区表 （ 2025年3月升级版 ）",
+            "版本标签": "2025年3月升级版",
+            "年份": 2025,
+            "状态": "ok",
+            "学科层级": "major",
+            "学科名称": "生物学",
+            "分区": "1区",
+            "来源链接": "https://www.letpub.com.cn/index.php?page=journalapp&view=detail&journalid=1562",
+            "抓取时间": "2026-10-05T11:29:31.578572+00:00"
+          },
+          {
+            "LetPub期刊ID": "1562",
+            "期刊全称": "CELL",
+            "分区体系": "journal_partition",
+            "原始体系名称": "期刊分区表 （ 2025年3月升级版 ）",
+            "版本标签": "2025年3月升级版",
+            "年份": 2025,
+            "状态": "ok",
+            "学科层级": "minor",
+            "学科名称": "BIOCHEMISTRY & MOLECULAR BIOLOGY 生化与分子生物学",
+            "分区": "1区",
+            "来源链接": "https://www.letpub.com.cn/index.php?page=journalapp&view=detail&journalid=1562",
+            "抓取时间": "2026-10-05T11:29:31.578572+00:00"
+          },
+          {
+            "LetPub期刊ID": "1562",
+            "期刊全称": "CELL",
+            "分区体系": "journal_partition",
+            "原始体系名称": "期刊分区表 （ 2025年3月升级版 ）",
+            "版本标签": "2025年3月升级版",
+            "年份": 2025,
+            "状态": "ok",
+            "学科层级": "minor",
+            "学科名称": "CELL BIOLOGY 细胞生物学",
+            "分区": "1区",
+            "来源链接": "https://www.letpub.com.cn/index.php?page=journalapp&view=detail&journalid=1562",
+            "抓取时间": "2026-10-05T11:29:31.578572+00:00"
+          },
+          {
+            "LetPub期刊ID": "6775",
+            "期刊全称": "PLoS One",
+            "分区体系": "jcr",
+            "原始体系名称": "WOS期刊JCR分区 （ 2025-2026年最新版 ）",
+            "版本标签": "2025-2026年最新版",
+            "年份": null,
+            "状态": "login_required",
+            "学科层级": null,
+            "学科名称": null,
+            "分区": null,
+            "来源链接": "https://www.letpub.com.cn/index.php?page=journalapp&view=detail&journalid=6775",
+            "抓取时间": "2026-10-05T11:29:41.920547+00:00"
+          },
+          {
+            "LetPub期刊ID": "6775",
+            "期刊全称": "PLoS One",
+            "分区体系": "xinrui",
+            "原始体系名称": "《新锐期刊分区表》 （ 2026年3月发布 ）",
+            "版本标签": "2026年3月发布",
+            "年份": 2026,
+            "状态": "ok",
+            "学科层级": "major",
+            "学科名称": "综合性期刊",
+            "分区": "3区",
+            "来源链接": "https://www.letpub.com.cn/index.php?page=journalapp&view=detail&journalid=6775",
+            "抓取时间": "2026-10-05T11:29:41.920547+00:00"
+          },
+          {
+            "LetPub期刊ID": "6775",
+            "期刊全称": "PLoS One",
+            "分区体系": "xinrui",
+            "原始体系名称": "《新锐期刊分区表》 （ 2026年3月发布 ）",
+            "版本标签": "2026年3月发布",
+            "年份": 2026,
+            "状态": "ok",
+            "学科层级": "minor",
+            "学科名称": "MULTIDISCIPLINARY SCIENCES 综合性期刊",
+            "分区": "3区",
+            "来源链接": "https://www.letpub.com.cn/index.php?page=journalapp&view=detail&journalid=6775",
+            "抓取时间": "2026-10-05T11:29:41.920547+00:00"
+          },
+          {
+            "LetPub期刊ID": "6775",
+            "期刊全称": "PLoS One",
+            "分区体系": "journal_partition",
+            "原始体系名称": "期刊分区表 （ 2025年3月升级版 ）",
+            "版本标签": "2025年3月升级版",
+            "年份": 2025,
+            "状态": "ok",
+            "学科层级": "major",
+            "学科名称": "综合性期刊",
+            "分区": "3区",
+            "来源链接": "https://www.letpub.com.cn/index.php?page=journalapp&view=detail&journalid=6775",
+            "抓取时间": "2026-10-05T11:29:41.920547+00:00"
+          },
+          {
+            "LetPub期刊ID": "6775",
+            "期刊全称": "PLoS One",
+            "分区体系": "journal_partition",
+            "原始体系名称": "期刊分区表 （ 2025年3月升级版 ）",
+            "版本标签": "2025年3月升级版",
+            "年份": 2025,
+            "状态": "ok",
+            "学科层级": "minor",
+            "学科名称": "MULTIDISCIPLINARY SCIENCES 综合性期刊",
+            "分区": "3区",
+            "来源链接": "https://www.letpub.com.cn/index.php?page=journalapp&view=detail&journalid=6775",
+            "抓取时间": "2026-10-05T11:29:41.920547+00:00"
+          }
+        ]
+      },
+      {
+        "table": "查询记录",
+        "columns": [
+          {
+            "field": "input_id",
+            "label": "输入ID"
+          },
+          {
+            "field": "journal_name",
+            "label": "期刊全称"
+          },
+          {
+            "field": "issn",
+            "label": "ISSN"
+          },
+          {
+            "field": "status",
+            "label": "状态"
+          },
+          {
+            "field": "journal_id",
+            "label": "LetPub期刊ID"
+          },
+          {
+            "field": "message",
+            "label": "查询说明"
+          }
+        ],
+        "rows": [
+          {
+            "输入ID": 2,
+            "期刊全称": "PROTEIN AND PEPTIDE LETTERS",
+            "ISSN": "",
+            "状态": "matched",
+            "LetPub期刊ID": "6969",
+            "查询说明": "精确匹配"
+          },
+          {
+            "输入ID": 3,
+            "期刊全称": "",
+            "ISSN": "0929-8665",
+            "状态": "matched",
+            "LetPub期刊ID": "6969",
+            "查询说明": "精确匹配"
+          },
+          {
+            "输入ID": 4,
+            "期刊全称": "",
+            "ISSN": "1875-5305",
+            "状态": "matched",
+            "LetPub期刊ID": "6969",
+            "查询说明": "精确匹配"
+          },
+          {
+            "输入ID": 5,
+            "期刊全称": "",
+            "ISSN": "0028-0836",
+            "状态": "matched",
+            "LetPub期刊ID": "6054",
+            "查询说明": "精确匹配"
+          },
+          {
+            "输入ID": 6,
+            "期刊全称": "",
+            "ISSN": "0036-8075",
+            "状态": "matched",
+            "LetPub期刊ID": "7393",
+            "查询说明": "精确匹配"
+          },
+          {
+            "输入ID": 7,
+            "期刊全称": "",
+            "ISSN": "0092-8674",
+            "状态": "matched",
+            "LetPub期刊ID": "1562",
+            "查询说明": "精确匹配"
+          },
+          {
+            "输入ID": 8,
+            "期刊全称": "PLOS ONE",
+            "ISSN": "",
+            "状态": "matched",
+            "LetPub期刊ID": "6775",
+            "查询说明": "精确匹配"
+          },
+          {
+            "输入ID": 9,
+            "期刊全称": "CODEX NONEXISTENT JOURNAL 20261005",
+            "ISSN": "",
+            "状态": "not_found",
+            "LetPub期刊ID": null,
+            "查询说明": "LetPub 搜索没有返回期刊记录"
+          },
+          {
+            "输入ID": 10,
+            "期刊全称": "",
+            "ISSN": "0929-8666",
+            "状态": "invalid",
+            "LetPub期刊ID": null,
+            "查询说明": "ISSN 校验位不正确"
+          }
+        ]
+      },
+      {
+        "table": "候选清单",
+        "columns": [
+          {
+            "field": "input_id",
+            "label": "输入ID"
+          },
+          {
+            "field": "journal_id",
+            "label": "LetPub期刊ID"
+          },
+          {
+            "field": "journal_name",
+            "label": "期刊全称"
+          },
+          {
+            "field": "issn",
+            "label": "ISSN"
+          },
+          {
+            "field": "url",
+            "label": "候选链接"
+          },
+          {
+            "field": "reason",
+            "label": "候选原因"
+          }
+        ],
+        "rows": []
+      }
+    ]
+  }
+}

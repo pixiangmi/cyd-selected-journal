@@ -6,6 +6,7 @@
 - 支持 TXT、CSV、XLSX 和标准输入名单，精确匹配名称／ISSN，按期刊去重。
 - 获取页面 IF、CiteScore、OA、审稿周期、JCR 的 JIF／JCI 分区、期刊分区表和新锐分区，并保留版本与来源。
 - 支持可选本地 Cookie、24 小时缓存、断点续跑和有限重试。
+- 可选择原始英文／中文字段名、删除整列为空的列，并在终端或文件输出缺失值统计。
 
 ## 快速开始
 
@@ -17,13 +18,35 @@ python3 -m venv .venv
 
 每次任务会在 `runs/` 下生成结果。需要登录才能查看的字段，可通过 `--cookie-file` 读取本地 Netscape Cookie 文件；Cookie、缓存和运行目录均受 Git 忽略。
 
-详细说明见 [命令行使用指南](README_CLI.md)、[验证记录](VALIDATION.md) 和 [登录字段测试记录](COOKIE_TEST.md)。仓库提供 [输入模板](examples/journals.csv) 及 [匿名查询样例输出](examples/output/)。
+详细说明见 [命令行使用指南](docs/USAGE.md)、[验证记录](docs/VALIDATION.md) 和 [登录字段测试记录](docs/COOKIE_TEST.md)。仓库提供 [输入模板](examples/journals.csv)、[匿名查询样例输出](examples/output/) 及 [中文／删空列／缺失统计样例](examples/output-options/)。版本更新见 [CHANGELOG](CHANGELOG.md)。
+
+中文字段、删除空列并同时生成终端／文件缺失统计：
+
+```sh
+.venv/bin/python -m selected_journal query --input examples/journals.csv \
+  --field-names zh --drop-empty-columns --missing-report both
+```
 
 ```sh
 .venv/bin/python -m pytest -q
 ```
 
-当前有 33 项离线测试，以及 5 本期刊的匿名／登录字段在线验证。输出是 LetPub 页面抓取记录；指标年份、分区体系和缺失状态分别保留。
+当前有 71 项离线测试，以及 5 本期刊的匿名／登录字段在线验证。输出是 LetPub 页面抓取记录；指标年份、分区体系和缺失状态分别保留。
+
+## 工作区结构
+
+| 路径 | 用途 |
+| --- | --- |
+| `selected_journal/` | 独立命令行工具源码 |
+| `tests/` | 离线测试及固定 HTML 样本 |
+| `docs/` | 使用指南、验证记录和上游分析 |
+| `examples/` | 输入模板及可公开的固定样例输出 |
+| `runs/` | 本地任务输入、检查点和结果，不提交 Git |
+| `.letpub-cache/`、`runs/.letpub-cache/` | 按任务父目录保存的本地详情缓存，不提交 Git |
+| `.local/credentials/` | 本地 Cookie 文件，0600 权限，不提交 Git |
+| `.venv/`、`.local/inspection/` | 本地环境和页面检查材料，不提交 Git |
+
+`cyd_v1_stable.py` 与 `LICENSE` 保留在根目录，维持上游原文件。
 
 ## 上游说明
 

@@ -1,0 +1,83 @@
+﻿工作表,原始字段名,输出字段名,总行数,缺失数,非缺失数,缺失率,是否删除,缺失原因计数
+期刊汇总,journal_id,LetPub期刊ID,5,0,5,0.0,False,{}
+期刊汇总,input_ids,关联输入ID,5,0,5,0.0,False,{}
+期刊汇总,source_url,来源链接,5,0,5,0.0,False,{}
+期刊汇总,fetched_at,抓取时间,5,0,5,0.0,False,{}
+期刊汇总,journal_name,期刊全称,5,0,5,0.0,False,{}
+期刊汇总,journal_name_status,期刊全称_状态,5,0,5,0.0,False,{}
+期刊汇总,journal_name_raw,期刊全称_页面原文,5,0,5,0.0,False,{}
+期刊汇总,journal_name_version,期刊全称_版本标签,5,5,0,1.0,True,"{""unspecified"": 5}"
+期刊汇总,journal_name_year,期刊全称_指标年份,5,5,0,1.0,True,"{""unspecified"": 5}"
+期刊汇总,abbreviation,期刊简称,5,0,5,0.0,False,{}
+期刊汇总,abbreviation_status,期刊简称_状态,5,0,5,0.0,False,{}
+期刊汇总,abbreviation_raw,期刊简称_页面原文,5,0,5,0.0,False,{}
+期刊汇总,abbreviation_version,期刊简称_版本标签,5,5,0,1.0,True,"{""unspecified"": 5}"
+期刊汇总,abbreviation_year,期刊简称_指标年份,5,5,0,1.0,True,"{""unspecified"": 5}"
+期刊汇总,issn,ISSN,5,0,5,0.0,False,{}
+期刊汇总,issn_status,ISSN_状态,5,0,5,0.0,False,{}
+期刊汇总,issn_raw,ISSN_页面原文,5,0,5,0.0,False,{}
+期刊汇总,issn_version,ISSN_版本标签,5,5,0,1.0,True,"{""unspecified"": 5}"
+期刊汇总,issn_year,ISSN_指标年份,5,5,0,1.0,True,"{""unspecified"": 5}"
+期刊汇总,eissn,eISSN,5,1,4,0.2,False,"{""not_provided"": 1}"
+期刊汇总,eissn_status,eISSN_状态,5,0,5,0.0,False,{}
+期刊汇总,eissn_raw,eISSN_页面原文,5,1,4,0.2,False,"{""unspecified"": 1}"
+期刊汇总,eissn_version,eISSN_版本标签,5,5,0,1.0,True,"{""unspecified"": 5}"
+期刊汇总,eissn_year,eISSN_指标年份,5,5,0,1.0,True,"{""unspecified"": 5}"
+期刊汇总,impact_factor,影响因子IF,5,5,0,1.0,True,"{""login_required"": 5}"
+期刊汇总,impact_factor_status,影响因子IF_状态,5,0,5,0.0,False,{}
+期刊汇总,impact_factor_raw,影响因子IF_页面原文,5,0,5,0.0,False,{}
+期刊汇总,impact_factor_version,影响因子IF_版本标签,5,0,5,0.0,False,{}
+期刊汇总,impact_factor_year,影响因子IF_指标年份,5,5,0,1.0,True,"{""unspecified"": 5}"
+期刊汇总,citescore,CiteScore,5,0,5,0.0,False,{}
+期刊汇总,citescore_status,CiteScore_状态,5,0,5,0.0,False,{}
+期刊汇总,citescore_raw,CiteScore_页面原文,5,0,5,0.0,False,{}
+期刊汇总,citescore_version,CiteScore_版本标签,5,0,5,0.0,False,{}
+期刊汇总,citescore_year,CiteScore_指标年份,5,5,0,1.0,True,"{""unspecified"": 5}"
+期刊汇总,oa,开放获取状态,5,0,5,0.0,False,{}
+期刊汇总,oa_status,开放获取状态_状态,5,0,5,0.0,False,{}
+期刊汇总,oa_raw,开放获取状态_页面原文,5,0,5,0.0,False,{}
+期刊汇总,oa_version,开放获取状态_版本标签,5,5,0,1.0,True,"{""unspecified"": 5}"
+期刊汇总,oa_year,开放获取状态_指标年份,5,5,0,1.0,True,"{""unspecified"": 5}"
+期刊汇总,review_time,审稿周期,5,0,5,0.0,False,{}
+期刊汇总,review_time_status,审稿周期_状态,5,0,5,0.0,False,{}
+期刊汇总,review_time_raw,审稿周期_页面原文,5,0,5,0.0,False,{}
+期刊汇总,review_time_version,审稿周期_版本标签,5,5,0,1.0,True,"{""unspecified"": 5}"
+期刊汇总,review_time_year,审稿周期_指标年份,5,5,0,1.0,True,"{""unspecified"": 5}"
+期刊汇总,jcr_source_label,JCR分区_原始体系名称,5,0,5,0.0,False,{}
+期刊汇总,jcr_version,JCR分区_版本标签,5,0,5,0.0,False,{}
+期刊汇总,jcr_status,JCR分区_状态,5,0,5,0.0,False,{}
+期刊汇总,jcr_subjects,JCR分区_学科分区,5,5,0,1.0,True,"{""unspecified"": 5}"
+期刊汇总,journal_partition_source_label,期刊分区表（中科院）_原始体系名称,5,0,5,0.0,False,{}
+期刊汇总,journal_partition_version,期刊分区表（中科院）_版本标签,5,0,5,0.0,False,{}
+期刊汇总,journal_partition_status,期刊分区表（中科院）_状态,5,0,5,0.0,False,{}
+期刊汇总,journal_partition_subjects,期刊分区表（中科院）_学科分区,5,0,5,0.0,False,{}
+期刊汇总,xinrui_source_label,新锐分区_原始体系名称,5,0,5,0.0,False,{}
+期刊汇总,xinrui_version,新锐分区_版本标签,5,0,5,0.0,False,{}
+期刊汇总,xinrui_status,新锐分区_状态,5,0,5,0.0,False,{}
+期刊汇总,xinrui_subjects,新锐分区_学科分区,5,0,5,0.0,False,{}
+分区明细,journal_id,LetPub期刊ID,27,0,27,0.0,False,{}
+分区明细,journal_name,期刊全称,27,0,27,0.0,False,{}
+分区明细,scheme,分区体系,27,0,27,0.0,False,{}
+分区明细,source_label,原始体系名称,27,0,27,0.0,False,{}
+分区明细,version,版本标签,27,0,27,0.0,False,{}
+分区明细,year,年份,27,5,22,0.18518518518518517,False,"{""unspecified"": 5}"
+分区明细,status,状态,27,0,27,0.0,False,{}
+分区明细,level,学科层级,27,5,22,0.18518518518518517,False,"{""login_required"": 5}"
+分区明细,subject,学科名称,27,5,22,0.18518518518518517,False,"{""login_required"": 5}"
+分区明细,quartile,分区,27,5,22,0.18518518518518517,False,"{""login_required"": 5}"
+分区明细,basis,指标口径,27,27,0,1.0,True,"{""login_required"": 5, ""unspecified"": 22}"
+分区明细,source_url,来源链接,27,0,27,0.0,False,{}
+分区明细,fetched_at,抓取时间,27,0,27,0.0,False,{}
+查询记录,input_id,输入ID,9,0,9,0.0,False,{}
+查询记录,journal_name,期刊全称,9,6,3,0.6666666666666666,False,"{""unspecified"": 6}"
+查询记录,issn,ISSN,9,3,6,0.3333333333333333,False,"{""unspecified"": 3}"
+查询记录,raw,原始输入,9,9,0,1.0,True,"{""unspecified"": 9}"
+查询记录,status,状态,9,0,9,0.0,False,{}
+查询记录,journal_id,LetPub期刊ID,9,2,7,0.2222222222222222,False,"{""unspecified"": 2}"
+查询记录,message,查询说明,9,0,9,0.0,False,{}
+候选清单,input_id,输入ID,0,0,0,,False,{}
+候选清单,journal_id,LetPub期刊ID,0,0,0,,False,{}
+候选清单,journal_name,期刊全称,0,0,0,,False,{}
+候选清单,issn,ISSN,0,0,0,,False,{}
+候选清单,url,候选链接,0,0,0,,False,{}
+候选清单,reason,候选原因,0,0,0,,False,{}

@@ -5,6 +5,8 @@ __pycache__/
 build/
 dist/
 .inspection/
+.local/
+.DS_Store
 runs/
 .letpub-cache/
 cookies*.txt

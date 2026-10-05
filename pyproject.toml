@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "selected-journal"
-version = "0.1.0"
+version = "0.2.0"
 description = "Batch LetPub journal lookup with traceable exports"
 requires-python = ">=3.11"
 dependencies = ["requests>=2.32,<3", "beautifulsoup4>=4.12,<5", "openpyxl>=3.1,<4"]

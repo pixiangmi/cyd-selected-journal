@@ -1,0 +1,10 @@
+﻿输入ID,期刊全称,ISSN,状态,LetPub期刊ID,查询说明
+2,PROTEIN AND PEPTIDE LETTERS,,matched,6969,精确匹配
+3,,0929-8665,matched,6969,精确匹配
+4,,1875-5305,matched,6969,精确匹配
+5,,0028-0836,matched,6054,精确匹配
+6,,0036-8075,matched,7393,精确匹配
+7,,0092-8674,matched,1562,精确匹配
+8,PLOS ONE,,matched,6775,精确匹配
+9,CODEX NONEXISTENT JOURNAL 20261005,,not_found,,LetPub 搜索没有返回期刊记录
+10,,0929-8666,invalid,,ISSN 校验位不正确

@@ -8,7 +8,7 @@ from pathlib import Path
 from .client import LetPubClient, atomic_json
 from .inputs import read_file, read_lines
 from .runner import run_batch
-from .storage import read_events
+from .storage import ExportOptions, read_events
 
 
 def parser():
@@ -22,6 +22,12 @@ def parser():
     query.add_argument("--output", type=Path, help="新任务输出目录；不与 --resume 同用")
     query.add_argument("--cookie-file", type=Path, help="可选 Netscape 格式 LetPub Cookie 文件")
     query.add_argument("--refresh", action="store_true", help="不读取 24 小时详情缓存")
+    query.add_argument("--field-names", choices=("original", "zh"),
+                       help="导出列名：original 原始英文（默认），zh 中文；恢复时沿用上次设置")
+    query.add_argument("--drop-empty-columns", action=argparse.BooleanOptionalAction, default=None,
+                       help="删除表格中整列为空的字段；--no-drop-empty-columns 保留（默认）")
+    query.add_argument("--missing-report", choices=("none", "terminal", "file", "both"),
+                       help="缺失统计：none 不输出（默认），terminal 终端，file 文件，both 两者")
     return root
 
 
@@ -55,14 +61,22 @@ def main(argv=None):
             if directory.exists() and any(directory.iterdir()):
                 raise ValueError("输出目录非空，请指定新目录或使用 --resume")
             events = {}
+            manifest = {"schema_version": 1, "inputs": inputs}
+        saved_options = manifest.get("export_options", {})
+        if not isinstance(saved_options, dict):
+            raise ValueError("任务导出选项格式无效")
+        # Validate saved options too, without silently interpreting corrupted data.
+        options = ExportOptions(**saved_options)
+        options = ExportOptions(**{key: getattr(args, key) if getattr(args, key) is not None else value
+                                   for key, value in options.to_dict().items()})
         # Resolve credentials before creating a new task so configuration errors
         # don't leave a misleading input snapshot.
         client = LetPubClient(directory.parent / ".letpub-cache", args.cookie_file, args.refresh)
-        if not args.resume:
-            directory.mkdir(parents=True, exist_ok=True)
-            atomic_json(directory / "inputs.json", {"schema_version": 1, "inputs": inputs})
+        directory.mkdir(parents=True, exist_ok=True)
+        atomic_json(directory / "inputs.json", {**manifest, "export_options": options.to_dict()})
         print(f"任务目录: {directory}\n访问模式: {'已加载本地 Cookie（是否登录由页面决定）' if client.mode != 'anonymous' else '匿名'}", flush=True)
-        code, _ = run_batch(inputs, directory, client, events, emit=lambda message: print(message, flush=True))
+        code, _ = run_batch(inputs, directory, client, events, emit=lambda message: print(message, flush=True),
+                            export_options=options)
         print(f"结果: {directory / 'results.xlsx'}", flush=True)
         return code
     except KeyboardInterrupt:
