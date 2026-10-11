@@ -3,6 +3,7 @@ import copy
 import hashlib
 import http.cookiejar
 import json
+import math
 import os
 import re
 import tempfile
@@ -56,7 +57,10 @@ def load_cookies(session, filename):
 
 class LetPubClient:
     def __init__(self, cache_dir, cookie_file=None, refresh=False, session=None,
-                 sleep=time.sleep, clock=time.monotonic):
+                 sleep=time.sleep, clock=time.monotonic, request_interval=3):
+        if not math.isfinite(request_interval) or request_interval < 3:
+            raise ValueError("请求间隔须为至少3秒的有限数值")
+        self.request_interval = request_interval
         self.session = session or requests.Session()
         self.session.headers.update({"User-Agent": "Mozilla/5.0 (compatible; SelectedJournal/0.1)",
                                      "Accept-Language": "zh-CN,zh;q=0.9"})
@@ -81,7 +85,7 @@ class LetPubClient:
             raise FetchError("仅允许 HTTPS LetPub 请求")
         for attempt in range(3):
             if self.last_request is not None:
-                self.sleep(max(0, 3 - (self.clock() - self.last_request)))
+                self.sleep(max(0, self.request_interval - (self.clock() - self.last_request)))
             self.last_request = self.clock()
             try:
                 response = self.session.request(method, url, timeout=(10, 30), **kwargs)
@@ -108,7 +112,7 @@ class LetPubClient:
             message = text(soup)
             has_data = (any(text(td) == "期刊名字" for td in soup.find_all("td")) or
                         any("ISSN" in text(t) and "期刊名" in text(t) for t in soup.select("table.table_yjfx")))
-            if not has_data and re.search(r"请输入验证码|请完成验证|安全验证|访问过于频繁|异常访问|captcha", message, re.I):
+            if not has_data and re.search(r"请输入验证码|请完成验证|安全验证|访问过于频繁|请求页面的速度过快|异常访问|captcha", message, re.I):
                 self.stopped = True
                 raise AccessStopped("检测到访问验证页面，已停止网络访问")
             return html

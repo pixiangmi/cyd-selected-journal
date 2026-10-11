@@ -21,6 +21,8 @@ def parser():
     source.add_argument("--resume", type=Path, help="恢复已有任务目录")
     query.add_argument("--output", type=Path, help="新任务输出目录；不与 --resume 同用")
     query.add_argument("--cookie-file", type=Path, help="可选 Netscape 格式 LetPub Cookie 文件")
+    query.add_argument("--request-interval", type=float, help="HTTP请求最小间隔秒数，至少3秒；恢复时沿用")
+    query.add_argument("--identity-results", action="append", type=Path, help="已核实results.json，仅复用精确身份并重新抓取详情，可重复")
     query.add_argument("--refresh", action="store_true", help="不读取 24 小时详情缓存")
     query.add_argument("--field-names", choices=("original", "zh"),
                        help="导出列名：original 原始英文（默认），zh 中文；恢复时沿用上次设置")
@@ -28,6 +30,27 @@ def parser():
                        help="删除表格中整列为空的字段；--no-drop-empty-columns 保留（默认）")
     query.add_argument("--missing-report", choices=("none", "terminal", "file", "both"),
                        help="缺失统计：none 不输出（默认），terminal 终端，file 文件，both 两者")
+    enrich = commands.add_parser("enrich", help="去重查询期刊并回填文献 XLSX，保留原列")
+    enrich.add_argument("--input", required=True, type=Path)
+    enrich.add_argument("--output", required=True, type=Path)
+    enrich.add_argument("--journal-column", default="所属期刊")
+    enrich.add_argument("--key-column", help="稳定文献标识列；默认自动使用 Cite key")
+    enrich.add_argument("--header-row", type=int, help="表头行；默认在前50行自动定位")
+    enrich.add_argument("--sheet", help="工作表名；默认第一张表")
+    enrich.add_argument("--mappings", type=Path, help="已核实的刊名/ISSN及单篇文献覆盖 JSON")
+    enrich.add_argument("--results", action="append", type=Path, help="已有 results.json，可重复；指定后不访问网络")
+    enrich.add_argument("--work-dir", type=Path, help="输入、去重统计、查询及回填证据目录")
+    enrich.add_argument("--cookie-file", type=Path)
+    enrich.add_argument("--refresh", action="store_true")
+    enrich.add_argument("--request-interval", type=float)
+    enrich.add_argument("--identity-results", action="append", type=Path)
+    sync = commands.add_parser("sync-pdfs", help="追加PDF快照中新增可用文献，输出可重新enrich的六列表")
+    sync.add_argument("--input", required=True, type=Path)
+    sync.add_argument("--snapshot", required=True, type=Path)
+    sync.add_argument("--output", required=True, type=Path)
+    sync.add_argument("--header-row", type=int, default=7)
+    sync.add_argument("--sheet")
+    sync.add_argument("--work-dir", type=Path)
     return root
 
 
@@ -39,6 +62,14 @@ def main(argv=None):
         return 0 if error.code == 0 else 1
     client = None
     try:
+        if args.command == "sync-pdfs":
+            from .pdf_sync import sync_pdfs
+            report=sync_pdfs(args.input,args.snapshot,args.output,args.header_row,args.sheet,args.work_dir)
+            print(json.dumps(report,ensure_ascii=False,indent=2))
+            return 0
+        if args.command == "enrich":
+            from .enrichment import enrich
+            return enrich(args, main)
         if args.resume and args.output:
             raise ValueError("--resume 不与 --output 同用")
         if args.resume:
@@ -71,12 +102,19 @@ def main(argv=None):
                                    for key, value in options.to_dict().items()})
         # Resolve credentials before creating a new task so configuration errors
         # don't leave a misleading input snapshot.
-        client = LetPubClient(directory.parent / ".letpub-cache", args.cookie_file, args.refresh)
+        interval = args.request_interval if args.request_interval is not None else manifest.get("request_interval", 3)
+        identity_paths = args.identity_results or [Path(p) for p in manifest.get("identity_results", [])]
+        identities = ()
+        if identity_paths:
+            from .enrichment import read_results
+            identities = tuple(read_results(identity_paths)[0].values())
+        client = LetPubClient(directory.parent / ".letpub-cache", args.cookie_file, args.refresh, request_interval=interval)
+        manifest = {**manifest, "request_interval": interval, "identity_results": [str(p.resolve()) for p in identity_paths]}
         directory.mkdir(parents=True, exist_ok=True)
         atomic_json(directory / "inputs.json", {**manifest, "export_options": options.to_dict()})
         print(f"任务目录: {directory}\n访问模式: {'已加载本地 Cookie（是否登录由页面决定）' if client.mode != 'anonymous' else '匿名'}", flush=True)
         code, _ = run_batch(inputs, directory, client, events, emit=lambda message: print(message, flush=True),
-                            export_options=options)
+                            export_options=options, identities=identities)
         print(f"结果: {directory / 'results.xlsx'}", flush=True)
         return code
     except KeyboardInterrupt:

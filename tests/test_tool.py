@@ -237,7 +237,7 @@ def test_http_retry_timeout_spacing_and_nontransient(tmp_path):
     assert len(calls)==5
 
 
-@pytest.mark.parametrize('outcome',[(403,'blocked'),(429,'slow'),(200,'<h1>请输入验证码</h1>')])
+@pytest.mark.parametrize('outcome',[(403,'blocked'),(429,'slow'),(200,'<h1>请输入验证码</h1>'),(200,'<title>您请求页面的速度过快</title>')])
 def test_access_stop_makes_no_further_requests(tmp_path,outcome):
     session,calls=fake_session([outcome])
     c=LetPubClient(tmp_path,session=session,sleep=lambda _:None)
@@ -394,3 +394,62 @@ def test_exported_spreadsheet_text_is_inert_and_json_preserves_input(tmp_path,jo
     assert value.data_type=='s' and value.value=="'=1+1"
     wb.close()
     assert json.loads((tmp_path/'results.json').read_text())['queries'][0]['journal_name']=='=1+1'
+
+
+def test_configured_interval_and_validation(tmp_path):
+    c=LetPubClient(tmp_path, request_interval=20)
+    assert c.request_interval == 20
+    c.close()
+    for v in (0, 2.9, float('inf'), float('nan')):
+        with pytest.raises(ValueError): LetPubClient(tmp_path, request_interval=v)
+
+def test_verified_identity_fetches_fresh_detail_without_search(journal):
+    row=make_row(1, '', '0929-8665')
+    fresh=copy.deepcopy(journal)
+    fresh['fields']['citescore']['value']=9.7
+    class Client:
+        def detail(self, identifier):
+            assert identifier == journal['journal_id']
+            return fresh
+        def search(self, row):
+            raise AssertionError('Known exact identity must not repeat search')
+    event=resolve(row, Client(), {}, [journal])
+    assert event['journal']['fields']['citescore']['value']==9.7
+
+def test_verified_identity_change_requires_confirmation(journal):
+    row=make_row(1, '', '0929-8665')
+    changed=copy.deepcopy(journal)
+    changed['fields']['issn']['value']='1111-1111'
+    class Client:
+        def detail(self, identifier): return changed
+    assert resolve(row, Client(), {}, [journal])['query']['status']=='needs_confirmation'
+
+
+@pytest.mark.parametrize('raw,expected', [('Yes (Hybrid，可自选是否OA)','hybrid'),
+    ('Hybrid','hybrid'),('混合 OA','hybrid'),('Yes','open'),('No','closed'),('未知','unknown'),
+    ('Transformative (TJ转换期刊是订阅式/混合期刊)','transformative'),('TJ转换期刊','transformative'),
+    ('Yes LetPub与Taylor & Francis签署APC支持服务战略合作协议','open')])
+def test_explicit_hybrid_oa(raw,expected):
+    from selected_journal.parsing import oa_value
+    assert oa_value(raw)==expected
+
+
+def test_explicit_unavailable_metrics_are_not_parse_errors():
+    from bs4 import BeautifulSoup
+    from selected_journal.parsing import numeric_field,parse_classification
+    def cell(s): return BeautifulSoup('<td>'+s+'</td>','html.parser').td
+    c=numeric_field('CiteScore（2026年6月最新版）',cell('暂无CiteScore数据'))
+    assert c['status']=='not_provided' and c['value'] is None
+    p=parse_classification('WOS期刊JCR分区（2025-2026年最新版）',cell('WOS分区等级：0区 暂无按学科分区信息'),'jcr')
+    assert p['status']=='not_provided' and p['entries']==[] and '0区' in p['raw']
+    p=parse_classification('期刊分区表（2025年3月升级版）',cell('（没有被2025年的期刊分区表收录，仅供参考）'),'journal_partition')
+    assert p['status']=='not_in_list' and p['year']==2025
+    p=parse_classification('《新锐期刊分区表》（2026年3月发布）',cell('（没有被最新的JCR升级版收录，仅供参考）'),'xinrui')
+    assert p['status']=='not_in_list' and p['year']==2026
+
+def test_positive_classification_is_not_erased_by_old_absence_note():
+    from bs4 import BeautifulSoup
+    from selected_journal.parsing import parse_classification
+    c=BeautifulSoup('<td><table><tr><th>按JIF指标学科分区</th><th>分区</th></tr><tr><td>Biology</td><td>Q1</td></tr></table>没有被旧的期刊分区表收录</td>','html.parser').td
+    p=parse_classification('WOS期刊JCR分区（2026年最新版）',c,'jcr')
+    assert p['status']=='ok' and p['entries'][0]['quartile']=='Q1'

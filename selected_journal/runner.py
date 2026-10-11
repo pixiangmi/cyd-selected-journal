@@ -28,12 +28,18 @@ def make_event(row, status, message, journal=None, candidates=None):
             "journal": journal, "candidates": candidates or []}
 
 
-def resolve(row, client, existing):
+def resolve(row, client, existing, identities=()):
     if row["error"]:
         return make_event(row, "invalid", row["error"])
     for record in existing.values():
         if identity_matches(row, record):
             return matched_event(row, copy.deepcopy(record))
+    known = {r["journal_id"]: r for r in identities if identity_matches(row, r)}
+    if len(known) == 1:
+        record = client.detail(next(iter(known)))
+        if identity_matches(row, record):
+            return matched_event(row, record)
+        return make_event(row, "needs_confirmation", "已核实ID的最新详情与名称或ISSN不一致")
     search = client.search(row)
     candidates = search["candidates"]
     if not search["complete"]:
@@ -63,7 +69,7 @@ def matched_event(row, record):
                       "部分字段解析失败: " + ", ".join(broken) if broken else "精确匹配", record)
 
 
-def run_batch(inputs, directory, client, events=None, emit=print, export_options=None):
+def run_batch(inputs, directory, client, events=None, emit=print, export_options=None, identities=()):
     events = dict(events or {})
     existing = {event["journal"]["journal_id"]: event["journal"] for event in events.values()
                 if event.get("journal") and event["query"]["status"] == "matched"}
@@ -75,7 +81,7 @@ def run_batch(inputs, directory, client, events=None, emit=print, export_options
                 emit(f"[{index}/{len(inputs)}] 跳过已完成输入 {row['input_id']}")
                 continue
             try:
-                event = resolve(row, client, existing)
+                event = resolve(row, client, existing, identities)
             except AccessStopped as error:
                 event = make_event(row, "blocked", str(error))
                 events[row["input_id"]] = event

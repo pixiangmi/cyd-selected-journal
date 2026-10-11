@@ -2,11 +2,17 @@
 
 基于 [nickchen121/cyd-selected-journal](https://github.com/nickchen121/cyd-selected-journal) 的 fork，新增独立 Python 命令行工具：输入期刊名称或 ISSN，批量查询 LetPub 并导出 Excel、CSV 和 JSON。
 
+当前版本 **v0.4.0**。本次包含文献回填和 PDF 快照同步功能；已核实的问题尚未修复，使用前请阅读 [已知问题与边界](docs/KNOWN_ISSUES.md)，更新说明见 [CHANGELOG](CHANGELOG.md)。
+
 - Python 3.11+，无需 ChromeDriver 或 Tkinter。
 - 支持 TXT、CSV、XLSX 和标准输入名单，精确匹配名称／ISSN，按期刊去重。
 - 获取页面 IF、CiteScore、OA、审稿周期、JCR 的 JIF／JCI 分区、期刊分区表和新锐分区，并保留版本与来源。
 - 支持可选本地 Cookie、24 小时缓存、断点续跑和有限重试。
 - 可选择原始英文／中文字段名、删除整列为空的列，并在终端或文件输出缺失值统计。
+
+## 文献表期刊回填
+
+新增 `enrich` 命令：读取文献 XLSX、按期刊去重查询、保留原列并向同一工作表追加全部期刊信息。支持核查后的刊名/ISSN映射、未知期刊与预印本标记、已有查询结果的离线回填；详见 [文献表回填指南](docs/ENRICH.md)。
 
 ## 快速开始
 
@@ -31,7 +37,13 @@ python3 -m venv .venv
 .venv/bin/python -m pytest -q
 ```
 
-当前有 71 项离线测试，以及 5 本期刊的匿名／登录字段在线验证。输出是 LetPub 页面抓取记录；指标年份、分区体系和缺失状态分别保留。
+当前有 103 项离线测试，以及 5 本期刊的匿名／登录字段在线验证。新增功能的边界检查仍发现可复现问题，测试通过不代表所有输入都已覆盖。输出是 LetPub 页面抓取记录；指标年份、分区体系和缺失状态分别保留。
+
+## 已核实期刊身份的刷新与请求间隔
+
+在完整 `query` 命令中加 `--request-interval 20 --identity-results 上轮/results.json --refresh`，可按上轮精确刊名或 ISSN 核实的唯一 LetPub ID 重新抓取详情，减少重复搜索。身份来源可重复传入；详情身份变化时标记待确认。
+
+请求间隔至少 3 秒，默认 3 秒；间隔和身份来源写入输入快照，断点恢复时沿用。身份复用仍遵循详情缓存规则，需要最新指标时使用 `--refresh`；恢复任务不会刷新已完成项。访问验证、403、429 依旧立即停止。Cookie 由本地私有文件提供。
 
 ## 工作区结构
 

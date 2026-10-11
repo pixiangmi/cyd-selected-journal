@@ -105,6 +105,8 @@ def cell_status(cell):
     raw = text(cell)
     if re.search(r"(?:登录|注册).{0,20}(?:查看|后)|(?:查看|获取).{0,15}(?:登录|注册)", raw):
         return "login_required"
+    if re.match(r"^暂无\s*CiteScore\s*数据", raw, re.I):
+        return "not_provided"
     if raw.lower() in ("", "n/a", "na", "--", "-", "暂无", "无记录", "无"):
         return "not_provided"
     return "ok"
@@ -192,10 +194,18 @@ def parse_classification(label, cell, scheme):
                         basis = subject_key
                         entries.append({"level": "subject", "subject": text(record[subject_key]),
                                         "quartile": quartile(record[qkey]), "basis": basis})
-        if not entries or any(not e["quartile"] for e in entries):
+        if not entries:
+            raw = text(cell)
+            if "暂无按学科分区信息" in raw:
+                status = "not_provided"
+            elif re.search(r"没有被(?:最新的JCR升级版|(?:\d{4}年的|旧的)期刊分区表)收录", raw):
+                status = "not_in_list"
+            else:
+                status = "parse_error"
+        elif any(not e["quartile"] for e in entries):
             status = "parse_error"
     return {"scheme": scheme, "source_label": label, "version": version, "year": year,
-            "status": status, "entries": entries}
+            "status": status, "entries": entries, "raw": text(cell)}
 
 
 def release_key(label):
@@ -203,6 +213,21 @@ def release_key(label):
     years = re.findall(r"\d{4}", label)
     month = re.search(r"\d{4}年\s*(\d{1,2})月", label)
     return (max(map(int, years)) if years else 0, int(month.group(1)) if month else 0)
+
+
+
+
+def oa_value(raw):
+    """Recognize explicit hybrid OA wording; do not infer from generic Yes."""
+    folded = raw.casefold().strip()
+    advertised = re.match(r"^(yes|no|是|否)\s+letpub与", folded)
+    if advertised:
+        return {"yes":"open", "是":"open", "no":"closed", "否":"closed"}[advertised.group(1)]
+    if re.match(r"^transformative\b|^tj\s*转换期刊", folded):
+        return "transformative"
+    if re.search(r"\bhybrid\b|混合\s*oa|可自选是否\s*oa", folded):
+        return "hybrid"
+    return {"yes": "open", "是": "open", "no": "closed", "否": "closed"}.get(folded, "unknown")
 
 
 def parse_detail(html, journal_id):
@@ -248,8 +273,7 @@ def parse_detail(html, journal_id):
         elif label_text.startswith("是否OA"):
             raw = text(cell)
             state = cell_status(cell)
-            values = {"yes": "open", "是": "open", "no": "closed", "否": "closed", "hybrid": "hybrid", "混合oa": "hybrid"}
-            value = values.get(raw.casefold(), "unknown")
+            value = oa_value(raw)
             fields["oa"] = field(value, state if state != "ok" or value != "unknown" else "parse_error", raw)
         elif label_text == "平均审稿速度":
             fields["review_time"] = field(text(cell) if cell_status(cell) == "ok" else None, cell_status(cell), text(cell))
